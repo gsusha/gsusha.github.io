@@ -11,12 +11,13 @@
 		
 	<body>
 		<div class="wrapper">
-			<div class="background"></div>
-
 			<header class="header">
 				<div class="container">
 					<div class="header__body">
 						<div class="header__logo">gsusha</div>
+						<div class="header__burger">
+							<span></span>
+						</div>
 						<nav class="header__menu">
 							<ul class="header__list">
 								<li class="header__link"><a href="#">Обо мне</a></li>
@@ -29,14 +30,42 @@
 				</div>
 			</header>
 
-			<div class="content">
-				<div class="container"></div>
-			</div>
+			<div class="content"> <!-- Начало контента -->
+
+				<div class="home">
+					<div class="container">
+						<div class="home__bg1"><img src="img/bg1.svg" alt=""></div>
+						<div class="home__bg2"><img src="img/bg2.svg" alt=""></div>
+						<div class="home__body">
+							<div class="home__text">
+								<div class="home__supertitle">Привет, меня зовут</div>
+								<div class="home__title">Ксения Дьяченко</div>
+								<div class="home__subtitle">Я Front-End разработчик</div>
+								<div class="home__small-title">И создаю удобные и функциональные сайты
+по всем современным стандартам.</div>
+								<div class="home__btn"><a href="">Связаться</a></div>
+							</div>
+							<div class="home__img">
+								<img src="img/home.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div> <!-- Конец контента -->
 
 			<footer class="footer">
-				<div class="container"></div>
+				<div class="container">
+					<div class="footer__body">
+						<div class="footer__copy">&copy Created by <a href="">gsusha</a></div>
+						<div class="footer__year">2021</div>
+					</div>
+				</div>
 			</footer>
 
 		</div> <!-- Конец wrapper-->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="js/menu.js"></script>
 	</body>
 </html>
