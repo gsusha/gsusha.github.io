@@ -225,6 +225,17 @@ html,body {
 		top: -360px;
 		left: -240px;
 		z-index: -1;
+		animation: move-bg1 10s ease-in-out infinite;
+  	transform-origin: 50% 50%;
+
+		@keyframes move-bg1 {
+		  0%   { transform: scale(1)   translate(0px, 0px); }
+		  38%  { transform: scale(0.8, 1) translate(15px, -26px) rotate(5deg); }
+		  40%  { transform: scale(0.8, 1) translate(15px, -26px) rotate(5deg); }
+		  78%  { transform: scale(1) translate(20px, -22px) rotate(-10deg); }
+		  80%  { transform: scale(1) translate(20px, -22px) rotate(-10deg); }
+		  100% { transform: scale(1)   translate(0px, 0px); }
+		}
 	}
 
 	.home__bg2 {
@@ -232,66 +243,68 @@ html,body {
 		z-index: -1;
 		top: 25%;
 		right: -200px;
+		animation: move-bg2 10s ease-in-out infinite;
+  	transform-origin: 50% 50%;
+  	@keyframes move-bg2 {
+		  0%   { transform: scale(1)   translate(0px, 0px); }
+		  38%  { transform: scale(0.8, 1) translate(15px, -26px) rotate(5deg); }
+		  40%  { transform: scale(0.8, 1) translate(15px, -26px) rotate(5deg); }
+		  78%  { transform: scale(1.3) translate(20px, -22px) rotate(-10deg); }
+		  80%  { transform: scale(1.3) translate(20px, -22px) rotate(-10deg); }
+		  100% { transform: scale(1)   translate(0px, 0px); }
+		}
 	}
 
+
+
 	.home__body {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
+		text-align: center;
 
 		height: 100vh;
 
-		.home__text {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-
-			.home__supertitle {
-				color: $blue;
-				font-size: 18px;
-				font-weight: 500;
-				margin: 0px 0px 10px 0px;
-			}
-			.home__title {
-				font-weight: 900;
-				@include resp-font(48, 30);
-				margin: 0px 0px 20px 0px;
-			}
-			.home__subtitle {
-				color: $blue;
-				@include resp-font(24, 20);
-				font-weight: 700;
-				margin: 0px 0px 20px 0px;
-			}
-			.home__small-title {
-				line-height: 1.5;
-				margin: 0px 0px 20px 0px;
-			}
-			.home__btn a {
-				display: inline-block;
-				text-decoration: none;
-				border-radius: 5px;
-
-				background: $dirtyblue;
-				color: $lightblue;
-				font-weight: 700;
-
-				padding: 12px 26px;
-
-				transition: 0.3s ease 0s;
-			}
-			.home__btn a:hover {
-				background: $blue;
-			}
+		.home__supertitle {
+			color: $blue;
+			font-size: 18px;
+			font-weight: 500;
+			margin: 0px 0px 10px 0px;
 		}
-		.home__img {
-			align-self: center;
-			max-width: 600px;
+		.home__title {
+			font-weight: 900;
+			@include resp-font(48, 30);
+			margin: 0px 0px 20px 0px;
 		}
-		.home__img img {
-			width: 100%;
+		.home__subtitle {
+			color: $blue;
+			@include resp-font(24, 20);
+			font-weight: 700;
+			margin: 0px 0px 20px 0px;
+		}
+		.home__small-title {
+			line-height: 1.5;
+			margin: 0px 0px 20px 0px;
+		}
+		.home__btn a {
+			display: inline-block;
+			text-decoration: none;
+			border-radius: 5px;
+
+			background: $dirtyblue;
+			color: $lightblue;
+			font-weight: 700;
+
+			padding: 12px 26px;
+
+			transition: 0.3s ease 0s;
+		}
+		.home__btn a:hover {
+			background: $blue;
 		}
 	}
+
 
 	@media (max-width: 767px) {
 		.home__body {
@@ -302,6 +315,59 @@ html,body {
 		}
 	}
 
+}
+
+
+
+.process {
+	padding: 100px 0;
+	.process__body {
+
+		.process__title {
+			color: $darkblue;
+			font-weight: 900;
+			@include resp-font(36, 30);
+			text-align: center;
+
+			margin: 0px 0px 50px 0px;
+		}
+
+		.process__row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 -30px;
+
+			.process__item {
+				padding: 30px;
+				margin: 0px 30px;
+
+				background: $lightblue;
+				border-radius: 20px;
+
+				.process__item-icon {
+					max-width: 40px;
+					margin: 0px 0px 30px 0px;
+				}
+				.process__item-icon img {
+					width: 100%;
+				}
+				.process__item-title {
+					color: $darkblue;
+					font-size: 24px;
+					font-weight: 700;
+
+					margin: 0px 0px 30px 0px;
+				}
+				.process__item-subtitle {
+					color: $blue; 			
+					font-size: 14px;
+				}
+			}
+
+		}
+
+	}
 }
 
 /* ------ Content-end ------ */
