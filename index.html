@@ -11,17 +11,18 @@
 		
 	<body>
 		<div class="wrapper">
+
 			<header class="header">
 				<div class="container">
 					<div class="header__body">
-						<div class="header__logo">gsusha</div>
+						<div class="header__logo"><a href="#">gsusha</a></div>
 						<div class="header__burger">
 							<span></span>
 						</div>
 						<nav class="header__menu">
 							<ul class="header__list">
-								<li class="header__link"><a href="#">Обо мне</a></li>
-								<li class="header__link"><a href="#">Процесс работы</a></li>
+								<li class="header__link"><a href="#home">Обо мне</a></li>
+								<li class="header__link"><a href="#process">Процесс работы</a></li>
 								<li class="header__link"><a href="#">Прайс</a></li>
 								<li class="header__link"><a href="#">Портфолио</a></li>
 							</ul>
@@ -32,7 +33,7 @@
 
 			<div class="content"> <!-- Начало контента -->
 
-				<div class="home">
+				<div id="home" class="home">
 					<div class="container">
 						<div class="home__bg1"><img  src="img/bg1.svg" alt=""></div>
 						<div class="home__bg2"><img src="img/bg2.svg" alt=""></div>
@@ -47,35 +48,55 @@
 					</div>
 				</div>
 
-				<div class="process">
+				<div class="about">
 					<div class="container">
-						<div class="process__body">
-							<div class="process__title">Процесс работы</div>
-							<div class="process__row">
-								<div class="process__item">
-									<div class="process__item-icon"><img src="img/icons/icon.svg" alt=""></div>
-									<div class="process__item-title">Дизайн</div>
-									<div class="process__item-subtitle">создание индивидуального макета по вашим пожеланиям</div>
+						<div class="about__bg"><img src="img/bg-about.svg" alt=""></div>
+						<div class="about__title">Обо мне</div>
+						<div class="about__body">
+							<div class="about__desc">
+								<div class="about__text">
+									<div class="about__text-title">Кто я и чем занимаюсь:</div>
+									<div class="about__content">
+										Quisque risus, tristique egestas fermentum egestas curabitur lobortis elementum risus. Egestas feugiat iaculis facilisis enim tincidunt id non. Magna convallis praesent faucibus enim eget nisi, libero. Turpis ipsum auctor in velit. Facilisis amet, pellentesque diam euismod ante egestas id elementum, tincidunt. Est, non cras rhoncus tellus. Ullamcorper sed sed aliquet fames habitasse. Elementum fermentum condimentum pharetra dui auctor laoreet praesent.
+									</div>
 								</div>
-								<div class="process__item">
-									<div class="process__item-icon"><img src="img/icons/icon.svg" alt=""></div>
-									<div class="process__item-title">Дизайн</div>
-									<div class="process__item-subtitle">создание индивидуального макета по вашим пожеланиям</div>
+								<div class="about__img">
+									<img src="img/photo.png" alt="">
+									
+									<div class="about__substrate"><img src="img/photoblob.svg" alt=""></div>
 								</div>
-								<div class="process__item">
-									<div class="process__item-icon"><img src="img/icons/icon.svg" alt=""></div>
-									<div class="process__item-title">Дизайн</div>
-									<div class="process__item-subtitle">создание индивидуального макета по вашим пожеланиям</div>
-								</div>
-								<div class="process__item">
-									<div class="process__item-icon"><img src="img/icons/icon.svg" alt=""></div>
-									<div class="process__item-title">Дизайн</div>
-									<div class="process__item-subtitle">создание индивидуального макета по вашим пожеланиям</div>
+							</div>
+							<div class="about__skills">
+								<div class="about__skills-title">Мои навыки:</div>
+								<div class="about__progress">
+
+									<div class="about__item">
+										<div class="about__item-title">
+											<div class="about__name">HTML/CSS</div>
+											<div class="about__procent">80%</div>
+										</div>
+										<div class="about__scale"><span class="about__first"></span></div>
+									</div>
+									<div class="about__item">
+										<div class="about__item-title">
+											<div class="about__name">JavaScript</div>
+											<div class="about__procent">54%</div>
+										</div>
+										<div class="about__scale"><span class="about__second"></span></div>
+									</div>
+									<div class="about__item">
+										<div class="about__item-title">
+											<div class="about__name">Figma</div>
+											<div class="about__procent">93%</div>
+										</div>
+										<div class="about__scale"><span class="about__third"></span></div>
+									</div>
+
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>									
 
 			</div> <!-- Конец контента -->
 
