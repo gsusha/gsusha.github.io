@@ -1,0 +1,149 @@
+/* ------ Media Queries ------ */
+
+// Переменные  
+$purple: #827BB6;
+$darkblue: #324060;
+$blue: #4659A8;
+$dirtyblue: #81ABCC;
+$lightblue: #EFF5FA;
+
+// Миксины
+
+$max-width: 1280;
+
+@mixin resp-font($pcSize, $mobileSize) {
+	$addSize: $pcSize - $mobileSize;
+	$addMobileSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobileSize + px} + #{$addMobileSize} * ((100vw - 320px) / #{$max-width}));
+	}
+	@media (min-width: 767px) {
+		font-size: calc(#{$mobileSize + px} + #{$addSize} * (100vw / #{$max-width}));
+	}
+}
+
+
+/* Параметры для экранов меньше 767px */
+@media (max-width: 767px) {
+
+	body.lock {
+		overflow: hidden;
+	}
+
+	.header {
+		padding: 20px 0;
+
+		.header__row {
+			height: 30px;
+		}
+		.header__burger {
+			display: block;
+			position: relative;
+			width: 36px;
+			height: 23px;
+			position: relative;
+			z-index: 3;
+		}
+		.header__burger span {
+			position: absolute;
+			background-color: $darkblue;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			top: 10px;
+			transition: all 0.3s ease 0s;
+		}
+
+		.header__burger:before,
+		.header__burger:after {
+			content: '';
+			background-color: $darkblue;
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			transition: all 0.3s ease 0s;
+		}
+		.header__burger:before {
+			top: 0;
+		}
+		.header__burger:after {
+			bottom: 0;
+		}
+
+		.header__burger.active:before {
+			transform: rotate(45deg);
+			top: 10px;
+		}
+
+		.header__burger.active:after {
+			transform: rotate(-45deg);
+			bottom: 10px;
+		}
+
+		.header__burger.active span {
+			transform: scale(0);
+		}
+
+		.header__img {
+			flex: 0 1 20px;
+		}
+
+		.header__name {
+			font-size: 20px;
+			}
+
+		.header__menu {
+			position: fixed;
+			overflow: auto;
+			top: -100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			padding: 120px 20px 30px 20px;
+			transition: all 0.3s ease 0s;
+		}
+
+		.header__menu.active {
+			top: 0;
+		}
+
+		.header__list {
+			display: flex;
+			flex-direction: column;
+			font-size: 20px;
+		}
+
+		.header__list li {
+			margin: 0px 0px 60px 0px;
+		}
+	}
+
+
+	.home {
+		.home__body {
+			grid-template-columns: 1fr;
+			.home__img {
+				display: none;
+			}
+		}
+	}
+
+	.about {
+		.about__body {
+			.about__desc {
+				flex-direction: column-reverse;
+
+				.about__text {
+					margin: 0 0;
+				}
+
+				.about__img {
+					max-width: 150px;
+					margin: 0px 0px 40px 0px;
+				}
+			}
+		}
+	}
+
+}
