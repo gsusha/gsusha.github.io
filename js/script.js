@@ -1,5 +1,5 @@
 //Отвечает за плавное перемещение по якорям
-$("body").on("click","a", function (event) {
+$("nav").on("click","a", function (event) {
 		event.preventDefault();
  
 		let id  = $(this).attr('href'),
