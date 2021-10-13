@@ -77,6 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ------ Оболочка  ------ */
 html, body {
 				height: 100%;
+				scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -1073,6 +1074,9 @@ html, body {
 				.portfolio .portfolio__body .portfolio__gallery {
 								-ms-grid-columns: 1fr;
 								grid-template-columns: 1fr;
+				}
+				.portfolio .portfolio__body .portfolio__gallery .portfolio__item .portfolio__desc {
+								/* Добавить размеры */
 				}
 
 				.footer .footer__body {

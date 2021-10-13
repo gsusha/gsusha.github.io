@@ -240,6 +240,11 @@ $max-width: 1280;
 		.portfolio__body {
 			.portfolio__gallery {
 				grid-template-columns: 1fr;
+				.portfolio__item {
+					.portfolio__desc {
+						/* Добавить размеры */
+					}
+				}
 			}
 		}
 	}
