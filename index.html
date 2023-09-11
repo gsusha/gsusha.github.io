@@ -1,227 +1,316 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ru">
-	<head>
-		<title>gsusha — веб-разработка</title>
+<head>
+    <title>Ксения Дьяченко</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+</head>
+<body>
+<div class="wrapper">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <div class="left">
 
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+        <div class="info">
+            <div class="info__content">
+                <div class="img">
+                    <img src="img/gsusha.jpg" alt="Ksenia Dyachenko">
+                </div>
+                <div class="name">Ксения</div>
+                <div class="lastname">Дьяченко</div>
+                <div class="position">Frontend-разработчик</div>
+            </div>
+        </div>
 
-		<meta charset="UTF-8">
-	</head>
-		
-	<body id="body">
-		<div class="wrapper">
+        <div class="contact">
+            <div class="item">
+                <div class="icon">
+                    <img src="img/pin.svg" alt="Location">
+                </div>
+                <div class="item__info">
+                    <div class="item__title">Локация</div>
+                    <div class="item__subtitle">Ростов-на-Дону</div>
+                </div>
+            </div>
+            <a href="tel:+7 (960) 451-56-66" class="item">
+                <div class="icon">
+                    <img src="img/phone.svg" alt="Telephone">
+                </div>
+                <div class="item__info">
+                    <div class="item__title">Телефон</div>
+                    <div class="item__subtitle">+7 (960) 451-56-66</div>
+                </div>
+            </a>
+            <a href="https://t.me/gsusha" class="item" target="blank">
+                <div class="icon">
+                    <img src="img/tg.svg" alt="Telegram">
+                </div>
+                <div class="item__info">
+                    <div class="item__title">Телеграм</div>
+                    <div class="item__subtitle">@gsusha</div>
+                </div>
+            </a>
+            <a href="mailto:x.dyachenko@gmail.com" class="item">
+                <div class="icon">
+                    <img src="img/mail.svg" alt="E-mail">
+                </div>
+                <div class="item__info">
+                    <div class="item__title">E-mail</div>
+                    <div class="item__subtitle">x.dyachenko@yandex.ru</div>
+                </div>
+            </a>
+            <a href="https://github.com/gsusha" target="blank" class="item">
+                <div class="icon">
+                    <img src="img/github.svg" alt="GitHub">
+                </div>
+                <div class="item__info">
+                    <div class="item__title">GitHub</div>
+                    <div class="item__subtitle">gsusha</div>
+                </div>
+            </a>
+        </div>
 
-			<header id="header" class="header">
-				<div class="container">
-					<div class="header__body">
-						<div class="header__logo"><a href="#body">gsusha</a></div>
-						<div class="header__burger">
-							<span></span>
-						</div>
-						<nav class="header__menu">
-							<ul class="header__list">
-								<li class="header__link"><a href="#about">Обо мне</a></li>
-								<li class="header__link"><a href="#portfolio">Примеры работ</a></li>
-								<!--<li class="header__link"><a href="#price">Прайс</a></li>-->
-								 <li class="header__link"><a href="#contact">Связаться</a></li> 
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>
+        <div class="more">
+            <div class="more__title">Подробнее</div>
+            <div class="more__items">
 
-			<div class="content"> <!-- Начало контента -->
+                <div class="more__item">
+                    <div class="more__property">Дата рождения:</div>
+                    <div class="more__value">06.12.1999</div>
+                </div>
 
-				<div id="home" class="home">
-					<div class="container">
-						<div class="home__bg1"><img  src="img/bg1.svg" alt=""></div>
-						<div class="home__bg2"><img src="img/bg2.svg" alt=""></div>
-						<div class="home__body">
-								<div class="home__supertitle">Привет, меня зовут</div>
-								<div class="home__title">Ксения Дьяченко</div>
-								<div class="home__subtitle">Я — Веб-разработчик</div>
-								<div class="home__small-title">И создаю удобные и функциональные сайты
-по всем современным стандартам.</div>
-								<div class="home__btn"><a href="#contact">Связаться</a></div>
-						</div>
-					</div>
-				</div>
+                <div class="more__item">
+                    <div class="more__property">Формат работы:</div>
+                    <div class="more__value">Любой</div>
+                </div>
 
-				<div id="about" class="about">
-					<div class="container">
-						<div class="about__bg"><img src="img/bg-about.svg" alt=""></div>
-						<div class="about__title">Обо мне</div>
-						<div class="about__body">
-							<div class="about__desc">
-								<div class="about__text">
-									<div class="about__text-title">Кто я и чем занимаюсь:</div>
-									<div class="about__content">
-										Я учусь на инженера-программиста в Южном Федеральном Университете по специальности «Прикладная информатика» и занимаюсь веб-разработкой уже несколько лет. Раньше это было просто хобби, но сейчас вышло на более серьёзный уровень. Мне нравится создавать удобные и функциональные сайты, осваиваить новые техники, браться за сложные и интересные задачи. Моя цель — реализовать проект, сделав его комфортным как для заказчика, так и для пользователя.
-									</div>
-								</div>
-								<div class="about__img">
-									<img src="img/photo.png" alt="">
-									
-									<div class="about__substrate"><img src="img/photoblob.svg" alt=""></div>
-								</div>
-							</div>
-							<div class="about__skills">
-								<div class="about__skills-title">Мои навыки:</div>
-								<div class="about__progress">
+                <div class="more__item">
+                    <div class="more__property">Языки:</div>
+                    <div class="more__value">Английский (B1)</div>
+                </div>
 
-									<div class="about__item">
-										<div class="about__item-title">
-											<div class="about__name">
-												<svg>
-												    <path fill="currentColor" d="M8,3A2,2 0 0,0 6,5V9A2,2 0 0,1 4,11H3V13H4A2,2 0 0,1 6,15V19A2,2 0 0,0 8,21H10V19H8V14A2,2 0 0,0 6,12A2,2 0 0,0 8,10V5H10V3M16,3A2,2 0 0,1 18,5V9A2,2 0 0,0 20,11H21V13H20A2,2 0 0,0 18,15V19A2,2 0 0,1 16,21H14V19H16V14A2,2 0 0,1 18,12A2,2 0 0,1 16,10V5H14V3H16Z" />
-												</svg>
-												HTML/CSS
-											</div>
-											<div class="about__procent">80%</div>
-										</div>
-										<div class="about__scale"><span class="about__first"></span></div>
-									</div>
-									<div class="about__item">
-										<div class="about__item-title">
-											<div class="about__name">
-												<svg>
-												    <path fill="currentColor" d="M8,3A2,2 0 0,0 6,5V9A2,2 0 0,1 4,11H3V13H4A2,2 0 0,1 6,15V19A2,2 0 0,0 8,21H10V19H8V14A2,2 0 0,0 6,12A2,2 0 0,0 8,10V5H10V3M16,3A2,2 0 0,1 18,5V9A2,2 0 0,0 20,11H21V13H20A2,2 0 0,0 18,15V19A2,2 0 0,1 16,21H14V19H16V14A2,2 0 0,1 18,12A2,2 0 0,1 16,10V5H14V3H16Z" />
-												</svg>
-												JavaScript
-											</div>
-											<div class="about__procent">54%</div>
-										</div>
-										<div class="about__scale"><span class="about__second"></span></div>
-									</div>
-									<div class="about__item">
-										<div class="about__item-title">
-											<div class="about__name">
-												<svg>
-											    <path fill="currentColor" d="M3 17.25V21H6.75L17.81 9.93L14.06 6.18L3 17.25M22.61 18.36L18.36 22.61L13.16 17.41L14.93 15.64L15.93 16.64L18.4 14.16L19.82 15.58L18.36 17L19.42 18L20.84 16.6L22.61 18.36M6.61 10.83L1.39 5.64L5.64 1.39L7.4 3.16L4.93 5.64L6 6.7L8.46 4.22L9.88 5.64L8.46 7.05L9.46 8.05L6.61 10.83M20.71 7C21.1 6.61 21.1 6 20.71 5.59L18.37 3.29C18 2.9 17.35 2.9 16.96 3.29L15.12 5.12L18.87 8.87L20.71 7Z" />
-											</svg>
-												Figma
-											</div>
-											<div class="about__procent">93%</div>
-										</div>
-										<div class="about__scale"><span class="about__third"></span></div>
-									</div>
+            </div>
+        </div>
 
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+    </div>
 
-				<div id="portfolio" class="portfolio">
-					<div class="container">
-						<div class="portfolio__body">
-							<div class="portfolio__bg"><img src="img/bg-about.svg" alt=""></div>
-							<div class="portfolio__title">Примеры работ</div>
-							<div class="portfolio__gallery">
+    <div class="right">
 
-								<div class="portfolio__item">
-									<div class="portfolio__desc">
-										<div class="portfolio__icon"><img src="img/icons/megaphone.png" alt=""></div>
-										<div class="portfolio__name">Курсы ораторского искусства</div>
-									</div>
-									<a href="https://gsusha.ru/orator.club/" target="_blank"><img src="img/portfolio/orator-club.webp" alt=""></a>
-								</div>
+        <div class="right__block">
+            <div class="right__title">
+                Технологический стек
+            </div>
+            <div class="right__desc">
+                <p>
+                    Flutter, Dart, BLoC, Cubit, RX, RestAPI, Moor Database, DI, Build Runner
+                </p>
+                <p>
+                    React, Angular, Vue, JavaScript, TypeScript, Redux
+                </p>
+                <p>
+                    Git, Jira, Figma, Trello
+                </p>
+            </div>
+        </div>
 
-								<div class="portfolio__item">
-									<div class="portfolio__desc">
-										<div class="portfolio__icon"><img src="img/icons/towtruck.png" alt=""></div>
-										<div class="portfolio__name">
-											Сайт вызова эвакуаторной службы
-										</div>
-									</div>
-									<a href="https://evakuator-tambov68.ru" target="_blank"><img src="img/portfolio/evakuator.webp" alt=""></a>
-								</div>
+        <div class="right__block">
+            <div class="right__title">
+                Немного обо мне
+            </div>
+            <div class="right__desc">
+                <p>
+                    Я согласна с утверждением, что лучшая работа — это хобби, а моим хобби является разработка.
+                    Считаю написание кода творчеством и хочу как можно больше развиваться в своём деле.
+                    Регулярно участвую в хакатонах, чтобы выявить пробелы в своих знаниях. Люблю учиться и не боюсь сложных
+                    задач.
+                </p>
+                <b>О моих навыках</b>
+                <p>
+                    Владею Dart, JavaScript, TypeScript. Из фреймворков пишу на React и Flutter.
+                </p>
+                <p>
+                    Умею работать с языками запросов к БД. Люблю Pixel Perfect. Стараюсь придерживаться чистого кода.
+                    Понимаю и работаю по основным паттернам проектирования и методологиям программирования.
+                </p>
+            </div>
+        </div>
 
-								<div class="portfolio__item">
-									<div class="portfolio__desc">
-										<div class="portfolio__icon"><img src="img/icons/escooter.png" alt=""></div>
-										<div class="portfolio__name">
-											Витрина
-											электронных
-											самокатов
-										</div>
-									</div>
-									<a href="https://elrod.ru/" target="_blank"><img src="img/portfolio/elrod.webp" alt=""></a>
-								</div>
+        <div class="right__block">
+            <div class="right__title">
+                Образование
+            </div>
+            <div class="right__desc">
+                <div class="education">
+                    <div class="graduate">
+                        <div class="graduate__name">Бакалавриат</div>
+                        <div class="graduate__uni">Южный Федеральный Университет</div>
+                        <div class="graduate__type">Прикладная информатика</div>
+                        <div class="graduate__yrs">2017-2022</div>
+                    </div>
+                    <div class="graduate">
+                        <div class="graduate__name">Магистратура</div>
+                        <div class="graduate__uni">Южный Федеральный Университет</div>
+                        <div class="graduate__type">Прикладная информатика</div>
+                        <div class="graduate__yrs">2022-2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-								<div class="portfolio__item">
-									<div class="portfolio__desc">
-										<div class="portfolio__icon"><img src="img/icons/pot.png" alt=""></div>
-										<div class="portfolio__name">Витрина казанов</div>
-									</div>
-									<a href="https://superkazan.ru/" target="_blank"><img src="img/portfolio/super-kazan.webp" alt=""></a>
-								</div>
+        <div class="right__block">
+            <div class="right__title">
+                Опыт работы
+            </div>
+            <div class="right__desc">
+                <div class="exp">
+                    <div class="exp__item">
+                        <div class="exp__position">Frontend-разработчик</div>
+                        <div class="exp__company">Miura Tech / Таганрог (удалённо) / Сентябрь 2021 — Апрель 2022</div>
+                        <div class="exp__desc">
+                            Работала над несколькими React-проектами.
+                        </div>
+                    </div>
+                    <div class="exp__item">
+                        <div class="exp__position">Flutter-разработчик</div>
+                        <div class="exp__company">Рубиум / Таганрог (удалённо) / Май 2022 — настоящее время</div>
+                        <div class="exp__desc">
+                            Занималась написанием кода под приложение CRM-системы для ресторанов, внедряла новый
+                            функционал, рефакторила.
+                        </div>
+                    </div>
+                    <div class="exp__item">
+                        <div class="exp__position">Фриланс</div>
+                        <div class="exp__company">Май 2021 - по текущее время</div>
+                        <div class="exp__desc">
+                            Иногда беру небольшие проекты, чтобы научиться чему-то новому и вспомнить старое.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-							</div>
-						</div>
-					</div>
-				</div>
+        <div class="right__block">
+            <div class="right__title">
+                Примеры работ
+            </div>
+            <div class="right__desc">
+                <div class="projects">
 
-				<div id="contact" class="contact">
-					<div class="container">
-						<div class="contact__body">
-							<div class="contact__title">Связаться со мной</div>
-							<div class="contact__icons">
-								<div class="contact__icon">
-									<a href="https://wa.me/79604515666?text=Меня%20интересуют%20ваши%20услуги%20веб-программиста" target="_blank"></a>
-								</div>
-								<div class="contact__icon">
-									<a href="https://telegram.me/gsusha" target="_blank"></a>
-								</div>
-								<div class="contact__icon">
-									<a href="https://vk.com/gsusha" target="_blank"></a>
-								</div>
-								<div class="contact__icon">
-									<a href="https://www.instagram.com/x.dyachenko/" target="_blank"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>								
+                    <div class="projects__item">
+                        <div class="projects__name">Orator.club</div>
+                        <div class="projects__tags">
+                            <!-- <span class="tag teal">Commercial</span> -->
+                            <span class="tag blue">TypeScript</span>
+                            <span class="tag blue">React</span>
+                            <span class="tag violet">Redux</span>
+                            <span class="tag pink">GraphQL</span>
+                        </div>
+                        <div class="projects__desc">
+                            Редизайн и модернизация старого сайта с переходом на клиент-серверную архитектуру.
+                            <br>
+                            Задачи: вёрстка по макету, переход на React, подключение к бэку. Backend на GraphCMS.
+                        </div>
+                    </div>
 
-			</div> <!-- Конец контента -->
+                    <div class="projects__item">
+                        <div class="projects__name">Every.Travel</div>
+                        <div class="projects__tags">
+                            <!-- <span class="tag teal">Commercial</span> -->
+                            <span class="tag blue">TypeScript</span>
+                            <span class="tag blue">React</span>
+                            <span class="tag violet">Redux</span>
+                            <span class="tag pink">GraphQL</span>
+                            <span class="tag blue">Material UI</span>
+                        </div>
+                        <div class="projects__desc">
+                            Перевоплощение старой панели управления на PHP в Single Page Application.
+                            <br>
+                            Задачи: полное сохранение старого функционала, использование компонентов из Material UI Kit.
+                        </div>
+                    </div>
 
-			<footer class="footer">
-				<div class="container">
-					<div class="footer__body">
-						<div class="footer__info">
-							<div class="footer__name">gsusha</div>
-							<div class="footer__position">Frontend Developer</div>
-							<div class="footer__icons">
-								<a href="https://wa.me/79604515666?text=Меня%20интересуют%20ваши%20услуги%20веб-программиста" target="_blank" class="footer__link">
-								
-								</a>
-								<a href="" target="_blank" class="footer__link">
-								
-								</a>
-								<a href="" target="_blank" class="footer__link"><img src="img/icons/vk.svg" alt=""></a>
-								<a href="" target="_blank" class="footer__link"><img src="img/icons/insta.svg" alt=""></a>
-							</div>
-						</div>
-						<div class="footer__menu">
-							<ul class="footer__list">
-								<li class="footer__link"><a href="#about">Обо мне</a></li>
-								<li class="footer__link"><a href="#portfolio">Примеры работ</a></li>
-								<!-- <li class="footer__link"><a href="#price">Прайс</a></li> -->
-								<li class="footer__link"><a href="#contact">Связаться</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</footer>
+                    <div class="projects__item">
+                        <a class="projects__name" href="https://totopizza.ru/" target="blank">
+                            To-To Пицца
+                            <img src="img/link.svg" alt="Link">
+                        </a>
+                        <div class="projects__tags">
+                            <!-- <span class="tag teal">Commercial</span> -->
+                            <span class="tag blue">TypeScript</span>
+                            <span class="tag blue">React</span>
+                            <span class="tag violet">Redux</span>
+                            <span class="tag pink">GraphQL</span>
+                        </div>
+                        <div class="projects__desc">
+                            Продолжение работы над проектом доставки пиццы.
+                            <br>
+                            Задачи: внедрение нового функционала, исправление ошибок, рефакторинг.
+                        </div>
+                    </div>
 
-		</div> <!-- Конец wrapper-->
+                    <div class="projects__item">
+                        <div class="projects__name">Смартомато</div>
+                        <div class="projects__tags">
+                            <!-- <span class="tag teal">Commercial</span> -->
+                            <span class="tag blue">Dart</span>
+                            <span class="tag blue">Flutter</span>
+                            <span class="tag green">BLoC</span>
+                            <span class="tag green">DI</span>
+                            <span class="tag orange">RestAPI</span>
+                        </div>
+                        <div class="projects__desc">
+                            Второй цикл разработки клиентского приложения CRM-системы для ресторанов.
+                            <br>
+                            Задачи: внедрение нового функционала, рефакторинг.
+                        </div>
+                    </div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="js/menu.js"></script>
-		<script src="js/script.js"></script>
-	</body>
+                    <div class="projects__item">
+                        <a class="projects__name" href="https://github.com/black-rusuz/rospatent" target="blank">
+                            Роспатент
+                            <img src="img/link.svg" alt="Link">
+                        </a>
+                        <div class="projects__tags">
+                            <!-- <span class="tag teal">Hackathon</span> -->
+                            <span class="tag blue">Dart</span>
+                            <span class="tag blue">Flutter</span>
+                            <span class="tag green">BLoC</span>
+                            <span class="tag green">DI</span>
+                            <span class="tag orange">RestAPI</span>
+                        </div>
+                        <div class="projects__desc">
+                            Уверенная победа в "Хакатон Роспатент ЮФУ" — мобильное приложение для поиска патентов в
+                            едином реестре с предоставленным API.
+                            <br>
+                            Задачи: создание дизайна, вёрстка по макету, проджект-менеджмент.
+                        </div>
+                    </div>
+
+                    <div class="projects__item">
+                        <a class="projects__name" href="https://github.com/black-rusuz/rospatent" target="blank">
+                            Таск-менеджер
+                            <img src="img/link.svg" alt="Link">
+                        </a>
+                        <div class="projects__tags">
+                            <!-- <span class="tag teal">Hackathon</span> -->
+                            <span class="tag blue">Dart</span>
+                            <span class="tag blue">Flutter</span>
+                            <span class="tag green">BLoC</span>
+                            <span class="tag green">DI</span>
+                            <span class="tag orange">RestAPI</span>
+                        </div>
+                        <div class="projects__desc">
+                            Мобильное приложение для ведения задач в корпоративных условиях.
+                            <br>
+                            Задачи: отрисовка макета, проектирование, описание моделей и вариантов использования, доработка бизнес-логики и слоя данных, вёрстка.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
 </html>

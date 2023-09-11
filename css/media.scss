@@ -1,262 +1,94 @@
-/* ------ Media Queries ------ */
+/* Параметры для экранов меньше 1024px */
+@media (max-width: 1024px) {
+	.right {
 
-// Переменные  
-$purple: #827BB6;
-$darkblue: #324060;
-$blue: #4659A8;
-$dirtyblue: #81ABCC;
-$lightblue: #EFF5FA;
-
-// Миксины
-
-$max-width: 1280;
-
-@mixin resp-font($pcSize, $mobileSize) {
-	$addSize: $pcSize - $mobileSize;
-	$addMobileSize: $addSize + $addSize * 0.7;
-	@media (max-width: 767px) {
-		font-size: calc(#{$mobileSize + px} + #{$addMobileSize} * ((100vw - 320px) / #{$max-width}));
-	}
-	@media (min-width: 767px) {
-		font-size: calc(#{$mobileSize + px} + #{$addSize} * (100vw / #{$max-width}));
-	}
-}
-
-/* Отображение анимации blob для экранов больше 767px */
-@media (min-width: 768px) {
-
-	.home {
-		.home__bg1 {
-			display: block;
-			position: absolute;
-			top: -360px;
-			left: -240px;
-			z-index: -1;
-			animation: move-bg1 10s ease-in-out infinite;
-			transform-origin: 50% 50%;
-
-			@keyframes move-bg1 {
-			  0%   { transform: scale(1)   translate(0px, 0px); }
-			  38%  { transform: scale(0.8, 1) translate(15px, -26px) rotate(5deg); }
-			  40%  { transform: scale(0.8, 1) translate(15px, -26px) rotate(5deg); }
-			  78%  { transform: scale(1) translate(20px, -22px) rotate(-10deg); }
-			  80%  { transform: scale(1) translate(20px, -22px) rotate(-10deg); }
-			  100% { transform: scale(1)   translate(0px, 0px); }
-			}
-		}
-
-		.home__bg2 {
-			display: block;
-			position: absolute;
-			z-index: -1;
-			top: 25%;
-			right: -200px;
-			animation: move-bg2 10s ease-in-out infinite;
-			transform-origin: 50% 50%;
-			@keyframes move-bg2 {
-				  0%   { transform: scale(1)   translate(0px, 0px); }
-				  38%  { transform: scale(0.8, 1) translate(15px, -26px) rotate(5deg); }
-				  40%  { transform: scale(0.8, 1) translate(15px, -26px) rotate(5deg); }
-				  78%  { transform: scale(1.3) translate(20px, -22px) rotate(-10deg); }
-				  80%  { transform: scale(1.3) translate(20px, -22px) rotate(-10deg); }
-				  100% { transform: scale(1)   translate(0px, 0px); }
-				}
-		}
-	}
-
-	.about {
-		.about__bg {
-			display: block;
-			position: absolute;
-			top: 0;
-			left: -8%;
-			z-index: -1;
-			animation: move-bg-about 10s ease-in-out infinite;
-			transform-origin: 50% 50%;
-
-			@keyframes move-bg-about {
-			  0%   { transform: scale(1)   translate(0px, 0px); }
-			  38%  { transform: scale(1) translate(15px, -26px) rotate(5deg); }
-			  40%  { transform: scale(1) translate(15px, -26px) rotate(5deg); }
-			  78%  { transform: scale(1) translate(20px, -22px) rotate(-10deg); }
-			  80%  { transform: scale(1) translate(20px, -22px) rotate(-10deg); }
-			  100% { transform: scale(1)   translate(0px, 0px); }
-			}
-		}
-	}
-
-	.portfolio {
-		.portfolio__body {
-			.portfolio__bg {
-				display: block;
-				position: absolute;
-				top: 0;
-				right: -8%;
-				z-index: -1;
-				animation: move-bg-portfolio 10s ease-in-out infinite;
-				transform-origin: 50% 50%;
-
-				@keyframes move-bg-portfolio {
-				  0%   { transform: scale(1)   translate(0px, 0px); }
-				  38%  { transform: scale(1) translate(15px, -26px) rotate(5deg); }
-				  40%  { transform: scale(1) translate(15px, -26px) rotate(5deg); }
-				  78%  { transform: scale(1) translate(20px, -22px) rotate(-10deg); }
-				  80%  { transform: scale(1) translate(20px, -22px) rotate(-10deg); }
-				  100% { transform: scale(1)   translate(0px, 0px); }
+		.right__block {
+			.right__title {
+				&::after {
+					display: none;
 				}
 			}
-		}
-	}
 
-}
-
-
-/* Параметры для экранов меньше 767px */
-@media (max-width: 767px) {
-
-	body.lock {
-		overflow: hidden;
-	}
-
-	.header {
-		padding: 20px 0;
-
-		.header__row {
-			height: 30px;
-		}
-		.header__burger {
-			display: block;
-			position: relative;
-			width: 36px;
-			height: 23px;
-			z-index: 3;
-		}
-		.header__burger span {
-			position: absolute;
-			background-color: $darkblue;
-			left: 0;
-			width: 100%;
-			height: 3px;
-			top: 10px;
-			transition: all 0.3s ease 0s;
-		}
-
-		.header__burger:before,
-		.header__burger:after {
-			content: '';
-			background-color: $darkblue;
-			position: absolute;
-			width: 100%;
-			height: 3px;
-			transition: all 0.3s ease 0s;
-		}
-		.header__burger:before {
-			top: 0;
-		}
-		.header__burger:after {
-			bottom: 0;
-		}
-
-		.header__burger.active:before {
-			transform: rotate(45deg);
-			top: 10px;
-		}
-
-		.header__burger.active:after {
-			transform: rotate(-45deg);
-			bottom: 10px;
-		}
-
-		.header__burger.active span {
-			transform: scale(0);
-		}
-
-		.header__img {
-			flex: 0 1 20px;
-		}
-
-		.header__name {
-			font-size: 20px;
-			}
-
-		.header__menu {
-			position: fixed;
-			overflow: auto;
-			top: -100%;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #fff;
-			padding: 120px 20px 30px 20px;
-			transition: all 0.3s ease 0s;
-		}
-
-		.header__menu.active {
-			top: 0;
-		}
-
-		.header__list {
-			display: flex;
+			.education {
 			flex-direction: column;
-			font-size: 20px;
-		}
 
-		.header__list li {
-			margin: 0px 0px 60px 0px;
-		}
-	}
-
-
-	.home {
-		.home__body {
-			grid-template-columns: 1fr;
-			.home__img {
-				display: none;
-			}
-		}
-	}
-
-	.about {
-		.about__body {
-			.about__desc {
-				flex-direction: column-reverse;
-
-				.about__text {
-					margin: 0 0;
-				}
-
-				.about__img {
-					max-width: 150px;
-					margin: 0px 0px 40px 0px;
+				.graduate {
+					&:first-child {
+						margin: 0 0 20px 0;
+					}
 				}
 			}
-		}
-	}
 
-}
-
-@media (max-width: 480px) {
-	.portfolio {
-		.portfolio__body {
-			.portfolio__gallery {
-				grid-template-columns: 1fr;
-				.portfolio__item {
-					.portfolio__desc {
-						/* Добавить размеры */
+			.projects {
+				.projects__item {
+					.projects__tags {
+						display: flex;
+						gap: 4px;
+						flex-wrap: wrap;
 					}
 				}
 			}
 		}
+
+	}
+}
+
+/* Параметры для экранов меньше 768px */
+@media (max-width: 768px) {
+	.wrapper {
+		flex-direction: column;
 	}
 
-	.footer {
-		.footer__body {
+	.main {
+		.main__items {
 			flex-direction: column;
-			align-items: flex-start;
+			align-items: center;
 
-			.footer__info {
-				margin: 0px 0px 30px 0px;
+			.main__item {
+				&:first-child {
+					margin: 0 0 40px 0;
+				}
 			}
 		}
+	}
+
+	.left {
+		width: 100%;
+
+		.info {
+			.info__content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+
+	.right {
+		.right__block {
+			.right__title {
+				&::after {
+					width: 0;
+				}
+			}
+		}
+	}
+}
+
+/* Параметры для экранов меньше 426px */
+@media (max-width: 426px) {
+	.main {
+		.main__items {
+			.main__item {
+				.main__img {
+					width: 240px;
+					height: 240px;
+				}
+			}
+		}
+	}
+
+	.right {
+		padding: 60px 40px;
 	}
 }
