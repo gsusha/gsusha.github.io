@@ -38,12 +38,16 @@
     display: flex;
     align-items: center;
 
+    font-family: var(--font-family-secondary), sans-serif;
+
     background: #ffffff;
-    color: #0D4CAC;
+    color: var(--color-text-primary);
     font-weight: 600;
     font-size: 22px;
     padding: 20px 50px 20px 114px;
     border-radius: 0 0 50px 0;
+
+    height: fit-content;
 
     position: relative;
 
@@ -85,6 +89,12 @@
       border-radius: 50%;
       box-shadow: inset 0 0 0 2px #ADC6DF;
     }
+
+    &:hover {
+      img {
+        animation: bounceImg 0.2s ease-out;
+      }
+    }
   }
 
   &__actions {
@@ -104,14 +114,9 @@
               rgba(255, 255, 255, 0.3) 100%
       );
 
-      background-color: rgba(255, 255, 255, 0);
-
       position: relative;
       top: -10px;
       left: 20px;
-
-      transition: background-color .4s ease;
-      will-change: background-color;
 
       cursor: pointer;
 
@@ -126,7 +131,12 @@
       }
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.3);
+        animation: bounceImg 0.2s ease-out;
+        background: linear-gradient(90deg, rgb(26, 183, 66) 0%, rgb(125, 225, 32) 100%);
+
+        img {
+          mix-blend-mode: multiply;
+        }
       }
     }
 
@@ -157,6 +167,15 @@
       mask: radial-gradient(circle 37px at -24px 25px, transparent 37px, black 38px);
 
       cursor: pointer;
+
+      &:hover {
+        animation: bounceImg 0.2s ease-out;
+        background: linear-gradient(180deg, rgb(125, 225, 32) 0%, rgb(125, 225, 32) 100%);
+
+        img {
+          mix-blend-mode: multiply;
+        }
+      }
     }
   }
 }

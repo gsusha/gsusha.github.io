@@ -76,6 +76,10 @@ $block: '.ui-hexagon';
   &:hover {
     filter: brightness(110%);
     cursor: pointer;
+
+    img {
+      animation: bounceImg 0.2s ease-out;
+    }
   }
 }
 
