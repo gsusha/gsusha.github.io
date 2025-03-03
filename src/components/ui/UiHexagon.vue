@@ -39,6 +39,9 @@ $block: '.ui-hexagon';
 
   position: relative;
 
+  transition: filter .1s ease-in-out;
+  will-change: filter;
+
   &--size {
     &-medium {
       width: 70px;
@@ -68,6 +71,11 @@ $block: '.ui-hexagon';
     img {
       object-fit: cover;
     }
+  }
+
+  &:hover {
+    filter: brightness(110%);
+    cursor: pointer;
   }
 }
 

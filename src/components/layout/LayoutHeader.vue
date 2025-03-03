@@ -1,19 +1,19 @@
 <template>
   <header class="layout-header">
     <div class="layout-header__name">
-      Ксения Дьяченко (Frontend Разработчик)
+      Ксения Дьяченко
     </div>
     <div class="layout-header__plumbob">
       <img src="@/assets/images/icons/plumbob.svg" alt="" />
     </div>
     <div class="layout-header__actions">
-      <a class="layout-header__actions-message layout-header__actions--circle" href="https://t.me/gsusha" target="_blank">
+      <a v-hint="'Telegram'" class="layout-header__actions-message layout-header__actions--circle" href="https://t.me/gsusha" target="_blank">
         <img src="@/assets/images/icons/telegram.svg" alt="" />
       </a>
-      <a class="layout-header__actions-phone layout-header__actions--circle" href="tel:89604515666">
+      <a v-hint="'Позвонить'" class="layout-header__actions-phone layout-header__actions--circle" href="tel:89604515666">
         <img src="@/assets/images/icons/phone.svg" alt="" />
       </a>
-      <div class="layout-header__actions-navigation">
+      <div v-hint="'Меню'" class="layout-header__actions-navigation">
         <img src="@/assets/images/icons/burger.svg" alt="" />
       </div>
     </div>
@@ -41,6 +41,7 @@
     background: #ffffff;
     color: #0D4CAC;
     font-weight: 600;
+    font-size: 22px;
     padding: 20px 50px 20px 114px;
     border-radius: 0 0 50px 0;
 
@@ -130,6 +131,8 @@
     }
 
     &-message {
+      display: block;
+
       border-radius: 50% 0 50% 50%;
       mask: radial-gradient(circle 37px at 94px 35px, transparent 37px, black 38px);
 
@@ -139,6 +142,7 @@
     }
 
     &-phone {
+      display: block;
       left: 10px;
     }
 

@@ -125,7 +125,7 @@ import FeatureSkills from "../features/FeatureSkills.vue";
 
   &__skills {
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 30px;
   }
 }

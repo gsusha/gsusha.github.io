@@ -1,12 +1,38 @@
 <template>
   <div class="feature-skills">
-    <UiHexagon class="feature-skills__skill feature-skills__skill--vue" size="big" type="vertical" border="gold" :img-src="PixelVueImage" />
-    <UiHexagon class="feature-skills__skill feature-skills__skill--ts" :img-src="PixelTsImage" type="vertical" border="gold" />
+    <UiHexagon
+        v-hint="'Vue 3'"
+        class="feature-skills__skill feature-skills__skill--vue"
+        size="big"
+        type="vertical"
+        border="gold"
+        :img-src="PixelVueImage"
+    />
+
+    <UiHexagon
+        v-hint="'TypeScript'"
+        class="feature-skills__skill feature-skills__skill--ts"
+        :img-src="PixelTsImage"
+        type="vertical"
+        border="gold"
+    />
 
     <div class="feature-skills__row">
-      <UiHexagon class="feature-skills__skill feature-skills__skill--nuxt" :img-src="PixelNuxtImage" />
-      <UiHexagon class="feature-skills__skill feature-skills__skill--pinia" :img-src="PixelPiniaImage" />
-      <UiHexagon class="feature-skills__skill feature-skills__skill--sass" :img-src="PixelSassImage" />
+      <UiHexagon
+          v-hint="'Nuxt 3'"
+          class="feature-skills__skill feature-skills__skill--nuxt"
+          :img-src="PixelNuxtImage"
+      />
+      <UiHexagon
+          v-hint="'Pinia'"
+          class="feature-skills__skill feature-skills__skill--pinia"
+          :img-src="PixelPiniaImage"
+      />
+      <UiHexagon
+          v-hint="'SCSS'"
+          class="feature-skills__skill feature-skills__skill--sass"
+          :img-src="PixelSassImage"
+      />
     </div>
   </div>
 </template>
@@ -35,14 +61,12 @@ import PixelSassImage from "@/assets/images/icons/pixel-sass.png";
 
     &--vue {
       position: relative;
-      z-index: 1;
     }
 
     &--ts {
       position: absolute;
-      top: -40px;
-      left: 56px;
-      z-index: 0;
+      top: -41px;
+      left: 58px;
     }
 
     &--pinia {
