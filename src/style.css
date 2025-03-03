@@ -30,32 +30,19 @@ body {
     min-height: 100vh;
 }
 
-.has-hint {
-    position: relative;
-}
-
-.has-hint::before {
-    content: attr(data-hint);
-    position: absolute;
+.hint-tooltip {
+    position: fixed;
     background: white;
     color: #0D4CAC;
     font-weight: 600;
+    font-size: 14px;
     padding: 6px 10px;
     border-radius: 5px;
-    font-size: 12px;
     white-space: nowrap;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
     pointer-events: none;
-
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 8px;
-}
-
-.has-hint:hover::before {
-    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+    z-index: 100;
+    opacity: 0;
 }
 
