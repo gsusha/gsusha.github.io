@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import AppHeader from "./components/AppHeader.vue";
-import AppFooter from "./components/AppFooter.vue";
-import AppCTA from "./components/AppCTA.vue";
+import LayoutHeader from "./components/layout/LayoutHeader.vue";
+import LayoutFooter from "./components/layout/LayoutFooter.vue";
+import SectionHero from "./components/sections/SectionHero.vue";
 </script>
 
 <template>
-  <AppHeader />
+  <LayoutHeader />
   <main class="main">
-    <AppCTA />
+    <SectionHero />
   </main>
-  <AppFooter />
+  <LayoutFooter />
 </template>
 
 <style lang="scss" scoped>
