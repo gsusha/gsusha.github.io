@@ -38,22 +38,6 @@ body {
     min-height: 100vh;
 }
 
-.hint-tooltip {
-    position: fixed;
-    background: white;
-    color: var(--color-text-primary);
-    font-weight: 600;
-    font-size: 14px;
-    padding: 6px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    pointer-events: none;
-    transition: opacity 0.1s ease-in-out;
-    z-index: 100;
-    opacity: 0;
-}
-
 @keyframes bounceImg {
     0% {
         transform: scaleY(0.8);
@@ -65,3 +49,65 @@ body {
         transform: scaleY(1);
     }
 }
+
+.popover-tooltip {
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 1000;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Общий стиль для стрелочки */
+.popover-tooltip::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Стрелочка для bottom (вниз) */
+.popover-tooltip[data-position="bottom"]::after {
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent white transparent;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Стрелочка для top (вверх) */
+.popover-tooltip[data-position="top"]::after {
+    border-width: 6px 6px 0 6px;
+    border-color: white transparent transparent transparent;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Стрелочка для left (влево) */
+.popover-tooltip[data-position="left"]::after {
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent white;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Стрелочка для right (вправо) */
+.popover-tooltip[data-position="right"]::after {
+    border-width: 6px 6px 6px 0;
+    border-color: transparent white transparent transparent;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+

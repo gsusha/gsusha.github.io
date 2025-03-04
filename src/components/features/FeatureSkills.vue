@@ -1,7 +1,7 @@
 <template>
   <div class="feature-skills">
     <UiHexagon
-        v-hint="'Vue 3'"
+        v-popover:right="'Vue 3'"
         class="feature-skills__skill feature-skills__skill--vue"
         size="big"
         type="vertical"
@@ -10,7 +10,7 @@
     />
 
     <UiHexagon
-        v-hint="'TypeScript'"
+        v-popover="'TypeScript'"
         class="feature-skills__skill feature-skills__skill--ts"
         :img-src="PixelTsImage"
         type="vertical"
@@ -19,17 +19,17 @@
 
     <div class="feature-skills__row">
       <UiHexagon
-          v-hint="'Nuxt 3'"
+          v-popover="'Nuxt 3'"
           class="feature-skills__skill feature-skills__skill--nuxt"
           :img-src="PixelNuxtImage"
       />
       <UiHexagon
-          v-hint="'Pinia'"
+          v-popover="'Pinia'"
           class="feature-skills__skill feature-skills__skill--pinia"
           :img-src="PixelPiniaImage"
       />
       <UiHexagon
-          v-hint="'SCSS'"
+          v-popover="'SCSS'"
           class="feature-skills__skill feature-skills__skill--sass"
           :img-src="PixelSassImage"
       />

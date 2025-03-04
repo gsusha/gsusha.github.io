@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import hintDirective from "@/directives/v-hint";
+import popoverDirective from "@/directives/v-popover";
 
 const app = createApp(App);
-app.directive("hint", hintDirective);
+app.directive("popover", popoverDirective);
 app.mount("#app");
