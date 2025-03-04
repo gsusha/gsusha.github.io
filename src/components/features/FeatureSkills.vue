@@ -48,8 +48,6 @@ import PixelSassImage from "@/assets/images/icons/pixel-sass.png";
 
 <style lang="scss" scoped>
 .feature-skills {
-  position: relative;
-
   &__row {
     position: absolute;
     top: 20px;

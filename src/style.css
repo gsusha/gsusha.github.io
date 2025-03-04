@@ -22,6 +22,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 :root {
     --color-text-primary: #0D4CAC;
     --color-text-secondary: #2384E7;
+    --color-text-accent: #1AB742;
     --font-family-primary: "Montserrat";
     --font-family-secondary: "Nunito";
 }

@@ -1,10 +1,9 @@
 <template>
   <div class="section-hero">
     <div class="section-hero__content">
-      <div class="section-hero__skills">
-        <FeatureSkills class="section-hero__skills" />
-      </div>
+      <FeatureSkills class="section-hero__skills" />
       <FeatureCharacter class="section-hero__model" />
+      <FeatureAboutCard class="section-hero__card" />
     </div>
     <div class="section-hero__overlap">
       <div class="section-hero__overlap-group">
@@ -19,8 +18,9 @@
   </div>
 </template>
 <script setup lang="ts">
-import FeatureCharacter from "../features/FeatureCharacter.vue";
-import FeatureSkills from "../features/FeatureSkills.vue";
+import FeatureCharacter from "@/components/features/FeatureCharacter.vue";
+import FeatureSkills from "@/components/features/FeatureSkills.vue";
+import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
 </script>
 
 <style lang="scss">
@@ -125,8 +125,18 @@ import FeatureSkills from "../features/FeatureSkills.vue";
 
   &__skills {
     position: absolute;
-    top: 100px;
-    left: 30px;
+    top: 200px;
+    left: 50px;
+  }
+
+  &__card {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+
+    width: 400px;
+
+    transform: translate(0, -50%);
   }
 }
 </style>

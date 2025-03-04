@@ -133,10 +133,6 @@
       &:hover {
         animation: bounceImg 0.2s ease-out;
         background: linear-gradient(90deg, rgb(26, 183, 66) 0%, rgb(125, 225, 32) 100%);
-
-        img {
-          mix-blend-mode: multiply;
-        }
       }
     }
 
@@ -171,10 +167,6 @@
       &:hover {
         animation: bounceImg 0.2s ease-out;
         background: linear-gradient(180deg, rgb(125, 225, 32) 0%, rgb(125, 225, 32) 100%);
-
-        img {
-          mix-blend-mode: multiply;
-        }
       }
     }
   }
