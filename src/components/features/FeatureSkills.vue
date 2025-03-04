@@ -5,9 +5,8 @@
         class="feature-skills__skill feature-skills__skill--vue"
         size="big"
         type="vertical"
-        border="gold"
+        state="special"
         :img-src="PixelVueImage"
-        is-special
         @click="selectTab(TAB_NAMES.vue)"
     />
 
@@ -16,7 +15,7 @@
         class="feature-skills__skill feature-skills__skill--ts"
         :img-src="PixelTsImage"
         type="vertical"
-        border="gold"
+        state="gold"
         @click="selectTab(TAB_NAMES.ts)"
     />
 

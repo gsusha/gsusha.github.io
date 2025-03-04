@@ -3,7 +3,7 @@
       'ui-hexagon',
       `ui-hexagon--size-${size}`,
       `ui-hexagon--type-${type}`,
-      `ui-hexagon--border-${border}`
+      `ui-hexagon--state-${state}`,
       ]">
     <div class="ui-hexagon__content">
       <img :src="imgSrc" alt="" />
@@ -16,13 +16,13 @@ interface UiHexagonProps {
   imgSrc?: string;
   size?: 'medium' | 'big';
   type?: 'horizontal' | 'vertical';
-  border?: 'default' | 'gold';
+  state?: 'default' | 'gold' | 'special';
 }
 
 withDefaults(defineProps<UiHexagonProps>(), {
   size: 'medium',
   type: 'horizontal',
-  border: 'default',
+  state: 'default',
 });
 </script>
 
@@ -89,7 +89,6 @@ $block: '.ui-hexagon';
 $types: (
     'horizontal': (
         'default': (
-            // я могла реализовать фон на css, но решила, что так практичнее
             background: url("src/assets/images/icons/hexagon-horizontal.svg"),
         ),
         'gold': (
@@ -103,13 +102,16 @@ $types: (
         'gold': (
             background: url("src/assets/images/icons/hexagon-vertical-gold.svg"),
         ),
+        'special': (
+            background: url("src/assets/images/icons/hexagon-vertical-premium.svg"),
+        ),
     ),
 );
 
 @each $type-key, $type-states in $types {
   #{$block}--type-#{$type-key} {
     @each $state, $state-value in $type-states {
-      &#{$block}--border {
+      &#{$block}--state {
         &-#{$state} {
           background: map.get($state-value, background) no-repeat center / cover;
         }
