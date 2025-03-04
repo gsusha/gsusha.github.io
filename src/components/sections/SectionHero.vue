@@ -7,12 +7,12 @@
     </div>
     <div class="section-hero__overlap">
       <div class="section-hero__overlap-group">
-        <div class="section-hero__overlap-group-ellipse-0" />
-        <div class="section-hero__overlap-group-ellipse-1" />
-        <div class="section-hero__overlap-group-ellipse-2" />
-        <div class="section-hero__overlap-group-ellipse-3" />
-        <div class="section-hero__overlap-group-ellipse-4" />
-        <div class="section-hero__overlap-group-ellipse-5" />
+        <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-0" />
+        <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-1" />
+        <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-2" />
+        <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-3" />
+        <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-4" />
+        <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-5" />
       </div>
     </div>
   </div>
@@ -47,6 +47,10 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
 
     &-group {
       position: relative;
+
+      &-ellipse {
+        pointer-events: none;
+      }
 
       &-ellipse-0 {
         background-color: #4ecd9b;

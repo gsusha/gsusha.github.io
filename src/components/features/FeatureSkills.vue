@@ -7,6 +7,8 @@
         type="vertical"
         border="gold"
         :img-src="PixelVueImage"
+        is-special
+        @click="selectTab(TAB_NAMES.vue)"
     />
 
     <UiHexagon
@@ -15,6 +17,7 @@
         :img-src="PixelTsImage"
         type="vertical"
         border="gold"
+        @click="selectTab(TAB_NAMES.ts)"
     />
 
     <div class="feature-skills__row">
@@ -22,17 +25,40 @@
           v-hint="'Nuxt 3'"
           class="feature-skills__skill feature-skills__skill--nuxt"
           :img-src="PixelNuxtImage"
+          @click="selectTab(TAB_NAMES.nuxt)"
       />
       <UiHexagon
           v-hint="'Pinia'"
           class="feature-skills__skill feature-skills__skill--pinia"
           :img-src="PixelPiniaImage"
+          @click="selectTab(TAB_NAMES.pinia)"
       />
       <UiHexagon
           v-hint="'SCSS'"
           class="feature-skills__skill feature-skills__skill--sass"
           :img-src="PixelSassImage"
+          @click="selectTab(TAB_NAMES.sass)"
       />
+    </div>
+
+    <div v-if="activeTab" class="feature-skills__info">
+      <div class="feature-skills__info-title">
+        О навыке
+      </div>
+
+      <div class="feature-skills__details">
+        <div class="feature-skills__details-label">
+          {{ activeTab.label }}
+        </div>
+
+        <div class="feature-skills__details-description">
+          {{ activeTab.description }}
+        </div>
+
+        <div class="feature-skills__details-progress">
+          <!-- Здесь будет прогресс-бар -->
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -44,10 +70,40 @@ import PixelTsImage from "@/assets/images/icons/pixel-ts.png";
 import PixelNuxtImage from "@/assets/images/icons/pixel-nuxt.png";
 import PixelPiniaImage from "@/assets/images/icons/pixel-pinia.png";
 import PixelSassImage from "@/assets/images/icons/pixel-sass.png";
+import { ref } from "vue";
+
+type TabType = {
+  label: string;
+  description: string;
+}
+
+const TAB_NAMES = {
+  vue: 'vue',
+  ts: 'ts',
+  nuxt: 'nuxt',
+  pinia: 'pinia',
+  sass: 'sass',
+};
+
+const activeTab = ref<TabType | null>(null);
+
+const tabsMap: Record<string, TabType> = {
+  vue: { label: 'Vue 3', description: 'Прогрессивный фреймворк для создания интерфейсов' },
+  ts: { label: 'TypeScript', description: 'Язык программирования, расширяющий JavaScript' },
+  nuxt: { label: 'Nuxt 3', description: 'Фреймворк на основе Vue для SSR и SSG' },
+  pinia: { label: 'Pinia', description: 'Современное хранилище состояний для Vue' },
+  sass: { label: 'SCSS', description: 'Препроцессор CSS с поддержкой переменных и вложенности' },
+};
+
+const selectTab = (key: string) => {
+  activeTab.value = activeTab.value?.label === tabsMap[key].label ? null : tabsMap[key];
+};
 </script>
 
 <style lang="scss" scoped>
 .feature-skills {
+  width: 306px;
+
   &__row {
     position: absolute;
     top: 20px;
@@ -118,6 +174,37 @@ import PixelSassImage from "@/assets/images/icons/pixel-sass.png";
     clip-path: polygon(0 0, 91% 0, 98% 100%, 0% 100%);
 
     z-index: -1;
+  }
+
+  &__info {
+    position: absolute;
+
+    top: 130%;
+    left: 0;
+
+    width: 100%;
+
+    &-title {
+      font-size: 22px;
+      color: #ffffff;
+      text-align: center;
+      text-shadow: -2px 1px 3px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+    }
+  }
+
+  &__details {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+
+    &-label {
+      font-size: 18px;
+      color: #ffffff;
+      text-align: center;
+      text-shadow: -2px 1px 2px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+    }
   }
 }
 </style>
