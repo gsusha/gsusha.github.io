@@ -7,13 +7,13 @@
       <img src="@/assets/images/icons/plumbob.svg" alt="" />
     </div>
     <div class="layout-header__actions">
-      <a v-popover="'Telegram'" class="layout-header__actions-message layout-header__actions--circle" href="https://t.me/gsusha" target="_blank">
+      <a v-popover="{ title: 'Telegram' }" class="layout-header__actions-message layout-header__actions--circle" href="https://t.me/gsusha" target="_blank">
         <img src="@/assets/images/icons/telegram.svg" alt="" />
       </a>
-      <a v-popover="'Позвонить'" class="layout-header__actions-phone layout-header__actions--circle" href="tel:89604515666">
+      <a v-popover="{ title: 'Позвонить' }" class="layout-header__actions-phone layout-header__actions--circle" href="tel:89604515666">
         <img src="@/assets/images/icons/phone.svg" alt="" />
       </a>
-      <div v-popover="'Меню'" class="layout-header__actions-navigation">
+      <div v-popover="{ title: 'Меню' }" class="layout-header__actions-navigation">
         <img src="@/assets/images/icons/burger.svg" alt="" />
       </div>
     </div>

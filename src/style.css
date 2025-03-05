@@ -53,20 +53,35 @@ body {
 .popover-tooltip {
     position: absolute;
     background: white;
-    color: black;
-    padding: 8px 12px;
+    color: var(--color-text-primary);
+    padding: 12px;
     border-radius: 6px;
-    font-size: 14px;
-    white-space: nowrap;
-    z-index: 1000;
+    z-index: 10;
     transition: opacity 0.2s ease, visibility 0.2s ease;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    max-width: 300px;
 }
 
-/* Общий стиль для стрелочки */
+
+.popover-tooltip .popover-tooltip__title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.popover-tooltip .popover-tooltip__content {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
 .popover-tooltip::after {
     content: "";
     position: absolute;
@@ -75,7 +90,6 @@ body {
     border-style: solid;
 }
 
-/* Стрелочка для bottom (вниз) */
 .popover-tooltip[data-position="bottom"]::after {
     border-width: 0 6px 6px 6px;
     border-color: transparent transparent white transparent;
@@ -84,7 +98,6 @@ body {
     transform: translateX(-50%);
 }
 
-/* Стрелочка для top (вверх) */
 .popover-tooltip[data-position="top"]::after {
     border-width: 6px 6px 0 6px;
     border-color: white transparent transparent transparent;
@@ -93,7 +106,6 @@ body {
     transform: translateX(-50%);
 }
 
-/* Стрелочка для left (влево) */
 .popover-tooltip[data-position="left"]::after {
     border-width: 6px 0 6px 6px;
     border-color: transparent transparent transparent white;
@@ -102,7 +114,6 @@ body {
     transform: translateY(-50%);
 }
 
-/* Стрелочка для right (вправо) */
 .popover-tooltip[data-position="right"]::after {
     border-width: 6px 6px 6px 0;
     border-color: transparent white transparent transparent;

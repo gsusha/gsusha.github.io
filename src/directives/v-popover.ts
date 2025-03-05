@@ -58,13 +58,23 @@ const calculatePosition = (
 };
 
 const popoverDirective = {
-    mounted(el: HTMLElement, binding: DirectiveBinding<string>) {
-        if (!binding.value) return;
-
+    mounted(el: HTMLElement, binding: DirectiveBinding<any>) {
         const position = binding.arg || "bottom";
+        const title = binding.value?.title || "";
+        const content = binding.value?.content || "";
 
         const showPopover = () => {
-            popover.innerText = binding.value;
+
+            if (content) {
+                popover.innerHTML = `
+                <div class="popover-tooltip__title">${title}</div>
+                <div class="popover-tooltip__content">${content}</div>
+            `;
+            } else {
+                popover.innerHTML = `
+                <div class="popover-tooltip__title">${title}</div>
+            `;
+            }
             popover.style.opacity = "1";
             popover.style.visibility = "visible";
 

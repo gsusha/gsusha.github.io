@@ -1,7 +1,7 @@
 <template>
   <div class="feature-skills">
     <UiHexagon
-        v-popover:right="'Vue 3'"
+        v-popover="{ title: 'Мастер Vue 3', content: 'Этот персонаж — истинный маг в использовании Vue 3! Она с лёгкостью создаёт динамичные интерфейсы, подстраиваясь под любые задачи и эффективно применяя Composition API для суперорганизованного кода.' }"
         class="feature-skills__skill feature-skills__skill--vue"
         size="big"
         type="vertical"
@@ -10,7 +10,7 @@
     />
 
     <UiHexagon
-        v-popover="'TypeScript'"
+        v-popover="{ title: 'Профи TypeScript', content: 'Этот персонаж не терпит ошибок. Он всегда находит типы и создаёт структуру, которая идеально вписывается в любой проект. Благодаря её опыту в TypeScript, приложение всегда работает без сбоев.' }"
         class="feature-skills__skill feature-skills__skill--ts"
         :img-src="PixelTsImage"
         type="vertical"
@@ -19,17 +19,17 @@
 
     <div class="feature-skills__row">
       <UiHexagon
-          v-popover="'Nuxt 3'"
+          v-popover="{ title: 'Гуру Nuxt 3', content: 'Как и любой стратег, этот персонаж всегда знает, как построить проект с нуля и сделать его максимально быстрым и надёжным. Nuxt 3 — её любимый инструмент для создания сервер-сайд рендеринга с лёгкостью.' }"
           class="feature-skills__skill feature-skills__skill--nuxt"
           :img-src="PixelNuxtImage"
       />
       <UiHexagon
-          v-popover="'Pinia'"
+          v-popover="{ title: 'Секретный агент Pinia', content: 'Как настоящий агент, она всегда точно знает, как управлять состоянием проекта, создавая чистый и понятный код с помощью Pinia.' }"
           class="feature-skills__skill feature-skills__skill--pinia"
           :img-src="PixelPiniaImage"
       />
       <UiHexagon
-          v-popover="'SCSS'"
+          v-popover="{ title: 'Чародей SCSS', content: 'Этот персонаж — волшебник CSS. Она строит стильные и адаптивные интерфейсы с использованием SCSS, создавая креативные и сложные стили, которые идеально подходят под любые устройства.' }"
           class="feature-skills__skill feature-skills__skill--sass"
           :img-src="PixelSassImage"
       />
