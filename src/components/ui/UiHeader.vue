@@ -10,6 +10,6 @@
   font-family: var(--font-family--secondary), sans-serif;
   text-align: center;
 
-  padding: 40px 0;
+  margin-bottom: 40px;
 }
 </style>

@@ -23,6 +23,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
     --color-text-primary: #0D4CAC;
     --color-text-secondary: #2384E7;
     --color-text-accent: #1AB742;
+    --color-background-primary: #1D3A67;
     --font-family-primary: "Montserrat";
     --font-family-secondary: "Nunito";
 }
@@ -30,6 +31,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 body {
     margin: 0;
     font-family: var(--font-family-primary), sans-serif;
+
+    background: linear-gradient(90deg, rgb(42, 105, 171) 0%, rgb(32, 127, 97) 100%);
 }
 
 #app {

@@ -3,9 +3,7 @@
     <SectionHero />
 
     <div class="layout-main__content">
-      <div class="layout-main__content-container">
-        <SectionExp />
-      </div>
+      <SectionExp class="layout-main__section" />
     </div>
   </main>
 </template>
@@ -26,18 +24,16 @@ import SectionExp from "@/components/sections/SectionExp.vue";
 
     position: relative;
     z-index: 1;
-    background: #ffffff;
+  }
 
-    top: -20px;
-    border-radius: 20px 20px 0 0;
+  &__section {
+    background: #ffffff;
+    border-radius: 20px;
+
+    width: 100%;
+    max-width: 1200px;
 
     padding: 40px;
-    margin-bottom: -20px;
-
-    &-container {
-      width: 100%;
-      max-width: 1200px;
-    }
   }
 }
 </style>

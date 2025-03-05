@@ -43,8 +43,6 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(90deg, rgb(42, 105, 171) 0%, rgb(32, 127, 97) 100%);
-
     &-group {
       position: relative;
 
