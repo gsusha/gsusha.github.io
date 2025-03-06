@@ -52,6 +52,10 @@ defineProps<UiAchievementProps>();
 
       position: relative;
       z-index: 1;
+
+      &:hover {
+        animation: bounceImg 0.2s ease-out;
+      }
     }
 
     &::before {

@@ -3,13 +3,13 @@
     <SectionHero />
 
     <div class="layout-main__content">
-      <SectionExp class="layout-main__section" />
+      <SectionCareer class="layout-main__section" />
     </div>
   </main>
 </template>
 <script setup lang="ts">
 import SectionHero from "@/components/sections/SectionHero.vue";
-import SectionExp from "@/components/sections/SectionExp.vue";
+import SectionCareer from "@/components/sections/SectionCareer.vue";
 </script>
 
 <style lang="scss" scoped>

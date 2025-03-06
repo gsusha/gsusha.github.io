@@ -1,15 +1,16 @@
 <template>
-  <div class="section-exp">
+  <div class="section-career">
     <UiHeader>
       <template #default>
-        Карьера и достижения 🏆
+        Карьера 🏆
       </template>
 
       <template #subtitle>
         Этот персонаж прошёл долгий путь и овладел искусством фронтенда, принимая сложные вызовы и создавая мощные проекты!
       </template>
     </UiHeader>
-    <div class="section-exp__content">
+    <UiSkill class="section-career__level" :img-src="ProgrammingImage" name="Frontend-разработка" progress="8" />
+    <div class="section-career__content">
       <UiAchievement
           v-for="company in companies"
           :img-src="company.image"
@@ -17,7 +18,7 @@
           :period="company.period"
           :description="company.description"
       >
-        <div class="section-exp__skills">
+        <div class="section-career__skills">
           <UiItem v-for="item in company.skills" :is="item" />
         </div>
       </UiAchievement>
@@ -28,10 +29,12 @@
 <script setup lang="ts">
 import UiItem from "@/components/ui/UiItem.vue";
 import UiHeader from "@/components/ui/UiHeader.vue";
+import UiSkill from "@/components/ui/UiSkill.vue";
 import UiAchievement from "@/components/ui/UiAchievement.vue";
 import PlantImage from "@/assets/images/plant.webp";
 import ChiefImage from "@/assets/images/chief.png";
 import AlienImage from "@/assets/images/alien.webp";
+import ProgrammingImage from '@/assets/images/programming.png';
 import { ITEM_NAME, ItemTypes } from "@/utils/common";
 
 const agrocomplexSkills: ItemTypes[] = [ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
@@ -66,7 +69,15 @@ const companies = [
 </script>
 
 <style lang="scss" scoped>
-.section-exp {
+.section-career {
+  display: flex;
+  flex-direction: column;
+
+  &__level {
+    align-self: center;
+    margin-bottom: 40px;
+  }
+
   &__skills {
     display: flex;
     gap: 4px;
