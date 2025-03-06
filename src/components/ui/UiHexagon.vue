@@ -7,11 +7,21 @@
       ]">
     <div class="ui-hexagon__content">
       <img :src="imgSrc" alt="" />
+      <div class="ui-hexagon__background">
+        <img :src="backgroundSrc" alt="" />
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { computed } from "vue";
+import HexagonHorizontalImage from '@/assets/images/hexagon-horizontal.svg';
+import HexagonHorizontalGoldImage from '@/assets/images/hexagon-horizontal.svg';
+import HexagonVerticalImage from '@/assets/images/hexagon-vertical.svg';
+import HexagonVerticalGoldImage from '@/assets/images/hexagon-vertical-gold.svg';
+import HexagonVerticalSpecialImage from '@/assets/images/hexagon-vertical-premium.svg';
+
 interface UiHexagonProps {
   imgSrc?: string;
   size?: 'medium' | 'big';
@@ -19,10 +29,32 @@ interface UiHexagonProps {
   state?: 'default' | 'gold' | 'special';
 }
 
-withDefaults(defineProps<UiHexagonProps>(), {
+const props = withDefaults(defineProps<UiHexagonProps>(), {
   size: 'medium',
   type: 'horizontal',
   state: 'default',
+});
+
+// TODO: переделать? не нравится
+const backgroundSrc = computed(() => {
+  if (props.type === 'vertical') {
+
+    if (props.state === 'gold') {
+      return HexagonVerticalGoldImage;
+    }
+
+    if (props.state === 'special') {
+      return HexagonVerticalSpecialImage;
+    }
+
+    return HexagonVerticalImage;
+  }
+
+  if (props.state === 'gold') {
+    return HexagonHorizontalGoldImage;
+  }
+
+  return HexagonHorizontalImage;
 });
 </script>
 
@@ -73,48 +105,25 @@ $block: '.ui-hexagon';
     }
   }
 
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   &:hover {
     filter: brightness(110%);
 
     img {
       animation: bounceImg 0.2s ease-out;
-    }
-  }
-}
-
-// в данном случае никакой практической пользы в использовании этой конструкции нет,
-// я просто показываю, что могу делать приколы на scss
-
-$types: (
-    'horizontal': (
-        'default': (
-            background: url("src/assets/images/icons/hexagon-horizontal.svg"),
-        ),
-        'gold': (
-            background: url("src/assets/images/icons/hexagon-horizontal-gold.svg"),
-        ),
-    ),
-    'vertical': (
-        'default': (
-            background: url("src/assets/images/icons/hexagon-vertical.svg"),
-        ),
-        'gold': (
-            background: url("src/assets/images/icons/hexagon-vertical-gold.svg"),
-        ),
-        'special': (
-            background: url("src/assets/images/icons/hexagon-vertical-premium.svg"),
-        ),
-    ),
-);
-
-@each $type-key, $type-states in $types {
-  #{$block}--type-#{$type-key} {
-    @each $state, $state-value in $type-states {
-      &#{$block}--state {
-        &-#{$state} {
-          background: map.get($state-value, background) no-repeat center / cover;
-        }
-      }
     }
   }
 }
