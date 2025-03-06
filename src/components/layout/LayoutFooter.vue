@@ -1,7 +1,13 @@
 <template>
-  <footer class="layout-footer">footer</footer>
+  <footer class="layout-footer">всё сама © gsusha</footer>
 </template>
 
 <script lang="ts" setup>  </script>
 
-<style></style>
+<style lang="scss" scoped>
+.layout-footer {
+  text-align: center;
+  padding: 60px 0;
+  color: #ffffff;
+}
+</style>

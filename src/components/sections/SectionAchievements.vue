@@ -6,11 +6,57 @@
       </template>
 
       <template #subtitle>
-        Каждое изученное умение — это новый бонус к эффективности! Эти навыки помогают мне побеждать баги и писать чистый код.
+        Я не просто пишу код, а постоянно прокачиваюсь и достигаю новых вершин!
       </template>
     </UiHeader>
+    <div class="section-achievements__content">
+      <div class="section-achievements__item">
+        <img src="@/assets/images/diploma.jpg" alt="" />
+        <div class="section-achievements__item-title">Бакалавр IT</div>
+      </div>
+      <div class="section-achievements__item">
+        <img src="@/assets/images/hackaton1.jpg" alt="" />
+        <div class="section-achievements__item-title">Выиграла хакатон</div>
+      </div>
+      <div class="section-achievements__item">
+        <img src="@/assets/images/hackaton2.jpg" alt="" />
+        <div class="section-achievements__item-title">Выиграла другой хакатон</div>
+      </div>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 import UiHeader from "@/components/ui/UiHeader.vue";
+
+// TODO: ресайзнуть
 </script>
+
+<style lang="scss" scoped>
+.section-achievements {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__item {
+    flex: 1 1 33%;
+    background: #EBEEF5;
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-title {
+      text-align: center;
+      padding: 20px 0;
+
+      color: var(--color-text-primary);
+      font-weight: 700;
+    }
+  }
+}
+</style>
