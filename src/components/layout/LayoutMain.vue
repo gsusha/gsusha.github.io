@@ -4,12 +4,14 @@
 
     <div class="layout-main__content">
       <SectionCareer class="layout-main__section" />
+      <SectionSkills class="layout-main__section" />
     </div>
   </main>
 </template>
 <script setup lang="ts">
 import SectionHero from "@/components/sections/SectionHero.vue";
 import SectionCareer from "@/components/sections/SectionCareer.vue";
+import SectionSkills from "@/components/sections/SectionSkills.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -21,6 +23,7 @@ import SectionCareer from "@/components/sections/SectionCareer.vue";
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 50px;
 
     position: relative;
     z-index: 1;

@@ -9,17 +9,18 @@
         Этот персонаж прошёл долгий путь и овладел искусством фронтенда, принимая сложные вызовы и создавая мощные проекты!
       </template>
     </UiHeader>
-    <UiSkill class="section-career__level" :img-src="ProgrammingImage" name="Frontend-разработка" progress="8" />
+    <UiSkill class="section-career__level" :img-src="ProgrammingImage" name="Frontend-разработка" level="8" />
     <div class="section-career__content">
       <UiAchievement
           v-for="company in companies"
+          :key="generateRandomId('company')"
           :img-src="company.image"
           :title="company.name"
           :period="company.period"
           :description="company.description"
       >
         <div class="section-career__skills">
-          <UiItem v-for="item in company.skills" :is="item" />
+          <UiItem v-for="item in company.skills" :key="generateRandomId('company-skill')" :is="item" />
         </div>
       </UiAchievement>
     </div>
@@ -35,7 +36,7 @@ import PlantImage from "@/assets/images/plant.webp";
 import ChiefImage from "@/assets/images/chief.png";
 import AlienImage from "@/assets/images/alien.webp";
 import ProgrammingImage from '@/assets/images/programming.png';
-import { ITEM_NAME, ItemTypes } from "@/utils/common";
+import {generateRandomId, ITEM_NAME, ItemTypes} from "@/utils/common";
 
 const agrocomplexSkills: ItemTypes[] = [ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
 const smartomatoSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];

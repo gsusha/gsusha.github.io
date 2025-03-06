@@ -5,10 +5,10 @@
     </div>
     <div class="ui-skill__body">
       <div class="ui-skill__name">{{ name }}</div>
-      <UiProgressBar class="ui-skill__progress" :value="progress" />
+      <UiProgressBar class="ui-skill__progress" :value="level" />
     </div>
     <div class="ui-skill__level">
-      {{ progress }}
+      {{ level }}
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ import UiProgressBar from "@/components/ui/UiProgressBar.vue";
 interface UiSkillProps {
   imgSrc: string;
   name: string;
-  progress: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
+  level: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10';
 }
 
 defineProps<UiSkillProps>();
@@ -66,6 +66,10 @@ defineProps<UiSkillProps>();
   &__name {
     color: var(--color-text-secondary);
     font-weight: 600;
+  }
+
+  &__progress {
+    flex: 0 0 90px;
   }
 
   &__level {
