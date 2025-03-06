@@ -29,6 +29,8 @@ import SectionAchievements from "@/components/sections/SectionAchievements.vue";
 
     position: relative;
     z-index: 1;
+
+    margin: 0 30px;
   }
 
   &__section {
