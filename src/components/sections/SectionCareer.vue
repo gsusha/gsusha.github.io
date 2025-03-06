@@ -12,6 +12,7 @@
     <UiSkill class="section-career__level" :img-src="ProgrammingImage" name="Frontend-разработка" level="8" />
     <div class="section-career__content">
       <UiAchievement
+          class="section-career__company"
           v-for="company in companies"
           :key="generateRandomId('company')"
           :img-src="company.image"
@@ -82,6 +83,20 @@ const companies = [
   &__skills {
     display: flex;
     gap: 4px;
+  }
+
+  &__company {
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: 5px 5px 0 0;
+      border-bottom: none;
+    }
+
+    &:last-child {
+      border-radius: 0 0 5px 5px;
+      border-top: none;
+    }
   }
 }
 </style>

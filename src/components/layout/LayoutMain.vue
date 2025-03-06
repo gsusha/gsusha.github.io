@@ -5,6 +5,7 @@
     <div class="layout-main__content">
       <SectionCareer class="layout-main__section" />
       <SectionSkills class="layout-main__section" />
+      <SectionAchievements class="layout-main__section" />
     </div>
   </main>
 </template>
@@ -12,6 +13,7 @@
 import SectionHero from "@/components/sections/SectionHero.vue";
 import SectionCareer from "@/components/sections/SectionCareer.vue";
 import SectionSkills from "@/components/sections/SectionSkills.vue";
+import SectionAchievements from "@/components/sections/SectionAchievements.vue";
 </script>
 
 <style lang="scss" scoped>
