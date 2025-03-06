@@ -7,7 +7,7 @@
       <div class="ui-achievement__text">
         <div class="ui-achievement__text-header">
           <div class="ui-achievement__text-title">{{ title }}</div>
-          <div class="ui-achievement__text-time">{{ time }}</div>
+          <div class="ui-achievement__text-period">{{ period }}</div>
         </div>
         <div class="ui-achievement__text-description">{{ description }}</div>
       </div>
@@ -22,7 +22,7 @@
 interface UiAchievementProps {
   imgSrc: string;
   title: string;
-  time: string;
+  period: string;
   description: string;
 }
 
@@ -88,7 +88,7 @@ defineProps<UiAchievementProps>();
       margin-bottom: 10px;
     }
 
-    &-time {
+    &-period {
       font-size: 12px;
       opacity: 0.6;
     }

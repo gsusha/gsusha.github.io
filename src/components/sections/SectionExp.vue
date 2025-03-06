@@ -11,35 +11,14 @@
     </UiHeader>
     <div class="section-exp__content">
       <UiAchievement
-          :img-src="PlantImage"
-          title="Фирма 'Агрокомплекс' им. Н.И. Ткачева"
-          time="Апрель 2024 — Январь 2025 (10 месяцев)"
-          description="Сложная миссия с крупным сервисом для B2B-продаж. Этот проект стал настоящим испытанием,
-          но благодаря смелым решениям с микрофронтендами и созданию UI-кита, персонаж заложил отличную базу
-          для великих свершений."
+          v-for="company in companies"
+          :img-src="company.image"
+          :title="company.name"
+          :period="company.period"
+          :description="company.description"
       >
         <div class="section-exp__skills">
-          <UiItem v-for="item in agrocomplexSkills" :is="item" />
-        </div>
-      </UiAchievement>
-      <UiAchievement
-          :img-src="ChiefImage"
-          title="Смартомато"
-          time="Май 2022 — Апрель 2024 (2 года)"
-          description="Этот персонаж сделал шаг в сторону Flutter-приложений, а затем погрузился в мир Vue и Nuxt. Сложности с адаптацией проекта под разные языки? Преодолены. Оптимизация стилей? Выполнена с блеском."
-      >
-        <div class="section-exp__skills">
-          <UiItem v-for="item in smartomatoSkills" :is="item" />
-        </div>
-      </UiAchievement>
-      <UiAchievement
-          :img-src="AlienImage"
-          title="Miura Tech"
-          time="Ноябрь 2021 — Май 2022 (7 месяцев)"
-          description="Персонаж принял вызов по переносу проекта с нативного JS на React. Здесь ей удалось не только освоить новый фреймворк, но и внедрить Material UI с магической лёгкостью."
-      >
-        <div class="section-exp__skills">
-          <UiItem v-for="item in miuraSkills" :is="item" />
+          <UiItem v-for="item in company.skills" :is="item" />
         </div>
       </UiAchievement>
     </div>
@@ -58,6 +37,32 @@ import { ITEM_NAME, ItemTypes } from "@/utils/common";
 const agrocomplexSkills: ItemTypes[] = [ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
 const smartomatoSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
 const miuraSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.react, ITEM_NAME.redux, ITEM_NAME.scss];
+
+const companies = [
+  {
+    image: PlantImage,
+    name: 'Фирма \'Агрокомплекс\' им. Н.И. Ткачева',
+    period: 'Апрель 2024 — Январь 2025 (10 месяцев)',
+    description: 'Сложная миссия с крупным сервисом для B2B-продаж. Этот проект стал настоящим испытанием, ' +
+        'но благодаря смелым решениям с микрофронтендами и созданию UI-кита, персонаж заложил отличную базу ' +
+        'для великих свершений.',
+    skills: agrocomplexSkills,
+  },
+  {
+    image: ChiefImage,
+    name: 'Смартомато',
+    period: 'Май 2022 — Апрель 2024 (2 года)',
+    description: 'Этот персонаж сделал шаг в сторону Flutter-приложений, а затем погрузился в мир Vue и Nuxt. Сложности с адаптацией проекта под разные языки? Преодолены. Оптимизация стилей? Выполнена с блеском.',
+    skills: smartomatoSkills,
+  },
+  {
+    image: AlienImage,
+    name: 'Miura Tech',
+    period: 'Ноябрь 2021 — Май 2022 (7 месяцев)',
+    description: 'Персонаж принял вызов по переносу проекта с нативного JS на React. Здесь ей удалось не только освоить новый фреймворк, но и внедрить Material UI с магической лёгкостью.',
+    skills: miuraSkills,
+  },
+]
 </script>
 
 <style lang="scss" scoped>
