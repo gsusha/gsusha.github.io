@@ -51,6 +51,10 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     font-size: 16px;
     line-height: 1.4;
   }
