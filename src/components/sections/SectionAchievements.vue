@@ -11,16 +11,16 @@
     </UiHeader>
     <div class="section-achievements__content">
       <div class="section-achievements__item">
-        <img src="@/assets/images/diploma.jpg" alt="" />
-        <div class="section-achievements__item-title">Бакалавр IT</div>
-      </div>
-      <div class="section-achievements__item">
         <img src="@/assets/images/hackaton1.jpg" alt="" />
         <div class="section-achievements__item-title">Выиграла хакатон</div>
       </div>
       <div class="section-achievements__item">
         <img src="@/assets/images/hackaton2.jpg" alt="" />
         <div class="section-achievements__item-title">Выиграла другой хакатон</div>
+      </div>
+      <div class="section-achievements__item">
+        <img src="@/assets/images/diploma.jpg" alt="" />
+        <div class="section-achievements__item-title">Бакалавр IT</div>
       </div>
     </div>
   </div>

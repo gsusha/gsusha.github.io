@@ -3,9 +3,9 @@
     <SectionHero />
 
     <div class="layout-main__content">
-      <SectionCareer class="layout-main__section" />
-      <SectionSkills class="layout-main__section" />
-      <SectionAchievements class="layout-main__section" />
+      <SectionCareer id="career" class="layout-main__section" />
+      <SectionSkills id="skills" class="layout-main__section" />
+      <SectionAchievements id="achievements" class="layout-main__section" />
     </div>
   </main>
 </template>

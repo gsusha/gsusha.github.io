@@ -20,9 +20,8 @@ import UiButton from "@/components/ui/UiButton.vue";
 
 <style lang="scss" scoped>
 .feature-about-card {
-
   &__description {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 </style>

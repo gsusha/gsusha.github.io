@@ -6,21 +6,27 @@
       `ui-hexagon--state-${state}`,
       ]">
     <div class="ui-hexagon__content">
-      <img :src="imgSrc" alt="" />
+      <img :src="imgSrc" alt=""/>
       <div class="ui-hexagon__background">
-        <img :src="backgroundSrc" alt="" />
+        <img :src="backgroundSrc" alt=""/>
+      </div>
+      <div v-if="state === 'special'" class="ui-hexagon__sparkles">
+        <div v-for="_item in 4" :key="generateRandomId('sparkle')" class="ui-hexagon__sparkle">
+          <img src="@/assets/images/icons/star.svg" alt=""/>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import {computed} from "vue";
 import HexagonHorizontalImage from '@/assets/images/hexagon-horizontal.svg';
 import HexagonHorizontalGoldImage from '@/assets/images/hexagon-horizontal.svg';
 import HexagonVerticalImage from '@/assets/images/hexagon-vertical.svg';
 import HexagonVerticalGoldImage from '@/assets/images/hexagon-vertical-gold.svg';
 import HexagonVerticalSpecialImage from '@/assets/images/hexagon-vertical-premium.svg';
+import {generateRandomId} from "@/utils/common";
 
 interface UiHexagonProps {
   imgSrc?: string;
@@ -62,6 +68,32 @@ const backgroundSrc = computed(() => {
 @use 'sass:map';
 
 $block: '.ui-hexagon';
+
+@keyframes glowLoop {
+  0%, 100% {
+    filter: brightness(100%);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(120%);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
 
 .ui-hexagon {
   display: flex;
@@ -116,6 +148,48 @@ $block: '.ui-hexagon';
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &--state-special {
+    animation: glowLoop 3s infinite ease-in-out;
+  }
+
+  &__sparkle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+
+    opacity: 0;
+    animation: sparkle 1.5s infinite ease-in-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:nth-child(1) {
+      top: 30%;
+      left: 16%;
+      animation-delay: 1s;
+    }
+
+    &:nth-child(2) {
+      top: 40%;
+      right: 5%;
+      animation-delay: 2s;
+    }
+
+    &:nth-child(3) {
+      bottom: 20%;
+      left: 30%;
+      animation-delay: 1s;
+    }
+
+    &:nth-child(4) {
+      bottom: 10%;
+      right: 20%;
+      animation-delay: 2s;
     }
   }
 
