@@ -26,6 +26,8 @@ defineProps<UiSkillProps>();
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .ui-skill {
   display: flex;
   align-items: center;
@@ -54,6 +56,8 @@ defineProps<UiSkillProps>();
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+
     width: 100%;
     height: 100%;
     background: #ffffff;
@@ -84,6 +88,24 @@ defineProps<UiSkillProps>();
     font-weight: 600;
 
     border-radius: 0 5px 5px 0;
+  }
+
+  @include media.max('md') {
+    width: 100%;
+
+    &__name {
+      font-size: 12px;
+    }
+  }
+
+  @include media.max('sm') {
+    &__progress {
+      flex-basis: 50px;
+    }
+
+    &__level {
+      flex-basis: 60px;
+    }
   }
 }
 </style>

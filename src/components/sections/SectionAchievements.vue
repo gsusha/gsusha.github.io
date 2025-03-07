@@ -32,6 +32,8 @@ import UiHeader from "@/components/ui/UiHeader.vue";
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .section-achievements {
   &__content {
     display: flex;
@@ -56,6 +58,16 @@ import UiHeader from "@/components/ui/UiHeader.vue";
 
       color: var(--color-text-primary);
       font-weight: 700;
+    }
+  }
+
+  @include media.max('lg') {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__item {
+      flex: unset;
     }
   }
 }

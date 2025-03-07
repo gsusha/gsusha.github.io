@@ -133,6 +133,8 @@ const skills: SkillType[] = [
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .section-skills {
   &__grid {
     display: grid;
@@ -141,6 +143,12 @@ const skills: SkillType[] = [
 
     &-item {
       width: 100%;
+    }
+  }
+
+  @include media.max('lg') {
+    &__grid {
+      grid-template-columns: 1fr;
     }
   }
 }

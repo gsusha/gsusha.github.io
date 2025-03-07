@@ -23,6 +23,8 @@
 <script lang="ts" setup>  </script>
 
 <style lang="scss">
+@use '@/assets/styles/media' as media;
+
 .layout-header {
   display: flex;
   justify-content: space-between;
@@ -155,6 +157,7 @@
     &-navigation {
       display: flex;
       align-items: center;
+      justify-content: center;
 
       background: rgba(255, 255, 255, 0.3);
 
@@ -167,6 +170,42 @@
       &:hover {
         animation: bounceImg 0.2s ease-out;
         background: linear-gradient(180deg, rgb(125, 225, 32) 0%, rgb(125, 225, 32) 100%);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @include media.max('md') {
+    &__name {
+      font-size: 18px;
+      padding: 16px 40px 16px 90px;
+
+      mask: radial-gradient(circle 30px at 45px 39px, transparent 28px, black 20px);
+    }
+
+    &__plumbob {
+      width: 50px;
+      height: 50px;
+
+      left: 20px;
+    }
+
+    &__actions {
+      &--circle {
+        width: 50px;
+        height: 50px;
+      }
+
+      &-navigation {
+
+        padding: 8px 20px 8px 20px;
+        img {
+          width: 70%;
+        }
       }
     }
   }

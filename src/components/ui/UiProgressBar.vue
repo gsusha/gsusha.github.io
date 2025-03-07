@@ -19,6 +19,8 @@ const isFull = computed(() => props.value === '10');
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .ui-progress-bar {
   position: relative;
   width: 90px;
@@ -32,6 +34,10 @@ const isFull = computed(() => props.value === '10');
     height: 100%;
     background: linear-gradient(to right, #6ab04c, #4caf50);
     width: v-bind(progressWidth);
+  }
+
+  @include media.max('sm') {
+    height: 12px;
   }
 }
 </style>
