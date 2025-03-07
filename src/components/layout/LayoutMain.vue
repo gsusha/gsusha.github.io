@@ -6,6 +6,7 @@
       <SectionCareer id="career" class="layout-main__section" />
       <SectionSkills id="skills" class="layout-main__section" />
       <SectionAchievements id="achievements" class="layout-main__section" />
+      <SectionHunt id="hunt" class="layout-main__section" />
     </div>
   </main>
 </template>
@@ -14,6 +15,7 @@ import SectionHero from "@/components/sections/SectionHero.vue";
 import SectionCareer from "@/components/sections/SectionCareer.vue";
 import SectionSkills from "@/components/sections/SectionSkills.vue";
 import SectionAchievements from "@/components/sections/SectionAchievements.vue";
+import SectionHunt from "@/components/sections/SectionHunt.vue";
 </script>
 
 <style lang="scss" scoped>

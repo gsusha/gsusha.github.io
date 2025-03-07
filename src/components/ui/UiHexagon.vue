@@ -69,17 +69,6 @@ const backgroundSrc = computed(() => {
 
 $block: '.ui-hexagon';
 
-@keyframes glowLoop {
-  0%, 100% {
-    filter: brightness(100%);
-    transform: scale(1);
-  }
-  50% {
-    filter: brightness(120%);
-    transform: scale(1.05);
-  }
-}
-
 @keyframes sparkle {
   0% {
     transform: translate(-50%, -50%) scale(0);
@@ -151,17 +140,13 @@ $block: '.ui-hexagon';
     }
   }
 
-  &--state-special {
-    animation: glowLoop 3s infinite ease-in-out;
-  }
-
   &__sparkle {
     position: absolute;
     width: 12px;
     height: 12px;
 
     opacity: 0;
-    animation: sparkle 1.5s infinite ease-in-out;
+    animation: sparkle 2s infinite ease-in-out;
 
     img {
       width: 100%;
@@ -172,18 +157,26 @@ $block: '.ui-hexagon';
       top: 30%;
       left: 16%;
       animation-delay: 1s;
+
+      width: 10px;
+      height: 10px;
     }
 
     &:nth-child(2) {
+      width: 8px;
+      height: 8px;
       top: 40%;
       right: 5%;
-      animation-delay: 2s;
+      animation-delay: 3s;
     }
 
     &:nth-child(3) {
+      width: 6px;
+      height: 6px;
+
       bottom: 20%;
       left: 30%;
-      animation-delay: 1s;
+      animation-delay: 1.5s;
     }
 
     &:nth-child(4) {

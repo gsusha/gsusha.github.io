@@ -17,7 +17,7 @@ interface UiButtonProps {
 }
 
 withDefaults(defineProps<UiButtonProps>(), {
-  type: 'primary',
+  type: 'outline',
 });
 </script>
 
