@@ -171,11 +171,6 @@
         animation: bounceImg 0.2s ease-out;
         background: linear-gradient(180deg, rgb(125, 225, 32) 0%, rgb(125, 225, 32) 100%);
       }
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
     }
   }
 

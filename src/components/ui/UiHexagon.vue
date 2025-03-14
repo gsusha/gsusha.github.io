@@ -133,11 +133,6 @@ $block: '.ui-hexagon';
     width: 100%;
     height: 100%;
     z-index: -1;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
   }
 
   &__sparkle {
@@ -147,11 +142,6 @@ $block: '.ui-hexagon';
 
     opacity: 0;
     animation: sparkle 2s infinite ease-in-out;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
 
     &:nth-child(1) {
       top: 30%;

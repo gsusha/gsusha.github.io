@@ -47,11 +47,6 @@ import UiHeader from "@/components/ui/UiHeader.vue";
     background: #EBEEF5;
     padding: 10px;
 
-    img {
-      width: 100%;
-      height: 100%;
-    }
-
     &-title {
       text-align: center;
       padding: 20px 0;

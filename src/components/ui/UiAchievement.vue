@@ -46,10 +46,6 @@ defineProps<UiAchievementProps>();
     position: relative;
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-
       position: relative;
       z-index: 1;
 

@@ -71,10 +71,5 @@ const itemTypesObject = {
   border-radius: 4px;
 
   background: linear-gradient(180deg, rgb(245, 248, 253) 0%, rgb(213, 228, 239) 100%);
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
 }
 </style>
