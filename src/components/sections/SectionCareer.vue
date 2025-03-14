@@ -33,10 +33,10 @@ import UiItem from "@/components/ui/UiItem.vue";
 import UiHeader from "@/components/ui/UiHeader.vue";
 import UiSkill from "@/components/ui/UiSkill.vue";
 import UiAchievement from "@/components/ui/UiAchievement.vue";
-import PlantImage from "@/assets/images/plant.webp";
-import ChiefImage from "@/assets/images/chief.png";
-import AlienImage from "@/assets/images/alien.webp";
-import ProgrammingImage from '@/assets/images/programming.png';
+import WheatImage from "@/assets/images/icons/wheat.svg";
+import TomatoImage from "@/assets/images/icons/tomato.svg";
+import AlienImage from "@/assets/images/icons/alien.svg";
+import ProgrammingImage from '@/assets/images/icons/programming.png';
 import {generateRandomId, ITEM_NAME, ItemTypes} from "@/utils/common";
 
 const agrocomplexSkills: ItemTypes[] = [ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
@@ -45,7 +45,7 @@ const miuraSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.react, I
 
 const companies = [
   {
-    image: PlantImage,
+    image: WheatImage,
     name: 'Фирма \'Агрокомплекс\' им. Н.И. Ткачева',
     period: 'Апрель 2024 — Январь 2025 (10 месяцев)',
     description: 'Сложная миссия с крупным сервисом для B2B-продаж. Этот проект стал настоящим испытанием, ' +
@@ -54,7 +54,7 @@ const companies = [
     skills: agrocomplexSkills,
   },
   {
-    image: ChiefImage,
+    image: TomatoImage,
     name: 'Смартомато',
     period: 'Май 2022 — Апрель 2024 (2 года)',
     description: 'Этот персонаж сделал шаг в сторону Flutter-приложений, а затем погрузился в мир Vue и Nuxt. Сложности с адаптацией проекта под разные языки? Преодолены. Оптимизация стилей? Выполнена с блеском.',

@@ -10,11 +10,6 @@
       </template>
     </UiHeader>
     <div class="section-hunt__content">
-      <div class="section-hunt__cv">
-        <div class="section-hunt__cv-img">
-          <img src="@/assets/images/cv.svg" alt="Резюме" />
-        </div>
-      </div>
       <UiButton>Полное резюме 📂</UiButton>
     </div>
   </div>
@@ -31,21 +26,6 @@ import UiButton from "@/components/ui/UiButton.vue";
     flex-direction: column;
     align-items: center;
     gap: 30px;
-  }
-
-  &__cv {
-    &-img {
-      width: 200px;
-      height: 200px;
-      border-radius: 20px;
-      background: #F5F5F5;
-      padding: 20px;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
   }
 }
 </style>

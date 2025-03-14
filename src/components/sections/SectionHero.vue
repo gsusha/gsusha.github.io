@@ -136,7 +136,7 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
     top: 50%;
     right: 10%;
 
-    width: 400px;
+    width: 520px;
 
     transform: translate(0, -50%);
   }
