@@ -70,6 +70,6 @@ const itemTypesObject = {
   padding: 10px;
   border-radius: 4px;
 
-  background: linear-gradient(180deg, rgb(245, 248, 253) 0%, rgb(213, 228, 239) 100%);
+  background: #e5eff6;
 }
 </style>

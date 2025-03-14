@@ -44,7 +44,7 @@ import UiHeader from "@/components/ui/UiHeader.vue";
 
   &__item {
     flex: 1 1 33%;
-    background: #EBEEF5;
+    background: #f2f4f8;
     padding: 10px;
 
     &-title {

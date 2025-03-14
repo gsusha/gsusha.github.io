@@ -30,6 +30,16 @@ import VueImage from '@/assets/images/icons/pixel-vue.png';
 import NuxtImage from '@/assets/images/icons/pixel-nuxt.png';
 import PiniaImage from '@/assets/images/icons/pixel-pinia.png';
 import SassImage from '@/assets/images/icons/pixel-sass.png';
+import TestImage from '@/assets/images/icons/pixel-test.png';
+import DockerImage from '@/assets/images/icons/pixel-docker.png';
+import StorybookImage from '@/assets/images/icons/pixel-storybook.png';
+import AnimationImage from '@/assets/images/icons/pixel-animation.png';
+import DocumentImage from '@/assets/images/icons/pixel-document.png';
+import PinImage from '@/assets/images/icons/pixel-pin.png';
+import RequestImage from '@/assets/images/icons/pixel-request.png';
+import LighthouseImage from '@/assets/images/icons/pixel-lighthouse.png';
+import PullRequestImage from '@/assets/images/icons/pixel-pr.png';
+import KissImage from '@/assets/images/icons/pixel-kiss.png';
 import { generateRandomId } from "@/utils/common";
 
 type SkillType = {
@@ -65,7 +75,7 @@ const skills: SkillType[] = [
     level: '7',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: StorybookImage,
     name: 'UI-киты (Ant Design, Quasar, кастомные Design Systems)',
     level: '8',
   },
@@ -75,47 +85,47 @@ const skills: SkillType[] = [
     level: '9',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: LighthouseImage,
     name: 'Оптимизация производительности',
     level: '8',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: TestImage,
     name: 'Тестирование',
     level: '5',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: RequestImage,
     name: 'REST API / GraphQL',
     level: '8',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: DockerImage,
     name: 'Docker и CI/CD',
     level: '7',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: KissImage,
     name: 'Архитектурные паттерны',
     level: '8',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: AnimationImage,
     name: 'Работа с анимациями',
     level: '8',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: PinImage,
     name: 'Работа с картами',
     level: '6',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: DocumentImage,
     name: 'Документирование',
     level: '10',
   },
   {
-    imgSrc: PiniaImage,
+    imgSrc: PullRequestImage,
     name: 'Менторинг и код-ревью',
     level: '8',
   },
