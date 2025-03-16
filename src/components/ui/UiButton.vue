@@ -1,10 +1,5 @@
 <template>
-  <a :href="href"
-     :class="[
-         'ui-button',
-         `ui-button--type-${type}`
-         ]"
-  >
+  <a class="ui-button" :href="href" :target="target">
     <slot />
   </a>
 </template>
@@ -13,12 +8,9 @@
 interface UiButtonProps {
   href?: string;
   target?: string;
-  type?: 'primary' | 'outline';
 }
 
-withDefaults(defineProps<UiButtonProps>(), {
-  type: 'outline',
-});
+defineProps<UiButtonProps>();
 </script>
 
 <style lang="scss" scoped>
@@ -27,7 +19,7 @@ withDefaults(defineProps<UiButtonProps>(), {
   width: fit-content;
 
   border-radius: 30px;
-  border: 2px solid transparent;
+  border: 2px solid #eeeeee;
 
   padding: 8px 20px;
 
@@ -37,18 +29,7 @@ withDefaults(defineProps<UiButtonProps>(), {
 
   cursor: pointer;
 
-  &--type {
-    // TODO: не нравится
-    &-primary {
-      color: #ffffff;
-      background: var(--color-text-primary);
-    }
-
-    &-outline {
-      border-color: #eeeeee;
-      color: var(--color-text-primary);
-      background: #ffffff;
-    }
-  }
+  color: var(--color-text-primary);
+  background: #ffffff;
 }
 </style>
