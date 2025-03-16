@@ -6,13 +6,13 @@
       `ui-hexagon--state-${state}`,
       ]">
     <div class="ui-hexagon__content">
-      <img :src="imgSrc" alt=""/>
+      <img class="ui-hexagon__content-img" :src="imgSrc" alt=""/>
       <div class="ui-hexagon__background">
-        <img :src="backgroundSrc" alt=""/>
+        <img class="ui-hexagon__background-img" :src="backgroundSrc" alt=""/>
       </div>
       <div v-if="state === 'special'" class="ui-hexagon__sparkles">
         <div v-for="_item in 4" :key="generateRandomId('sparkle')" class="ui-hexagon__sparkle">
-          <img src="@/assets/images/icons/star.svg" alt=""/>
+          <img class="ui-hexagon__sparkle-img" src="@/assets/images/icons/star.svg" alt=""/>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@ $block: '.ui-hexagon';
   }
 }
 
-.ui-hexagon {
+#{$block} {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +100,7 @@ $block: '.ui-hexagon';
       width: 70px;
       height: 72px;
 
-      img {
+      #{$block}__content-img {
         width: 50%;
         height: 50%;
       }
@@ -110,7 +110,7 @@ $block: '.ui-hexagon';
       width: 100px;
       height: 110px;
 
-      img {
+      #{$block}__content-img {
         width: 70%;
         height: 70%;
       }
@@ -121,7 +121,7 @@ $block: '.ui-hexagon';
     max-width: 100%;
     max-height: 100%;
 
-    img {
+    &-img {
       object-fit: cover;
     }
   }

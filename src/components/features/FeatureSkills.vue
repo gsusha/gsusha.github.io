@@ -81,45 +81,5 @@ import PixelSassImage from "@/assets/images/icons/pixel-sass.png";
       left: 108px;
     }
   }
-
-  &::before {
-    content: '';
-
-    position: absolute;
-    top: calc(50% - 4px);
-    left: 90px;
-
-    width: 36px;
-    height: 4px;
-    background: linear-gradient(
-            90deg,
-            rgb(225, 185, 105) 0%,
-            rgba(255, 255, 255, 0.6) 100%
-    );
-
-    z-index: -1;
-
-    clip-path: polygon(0 0, 96% 0, 89% 100%, 0% 100%);
-  }
-
-  &::after {
-    content: '';
-
-    position: absolute;
-    top: calc(50% + 4px);
-    left: 90px;
-
-    width: 36px;
-    height: 4px;
-    background: linear-gradient(
-            90deg,
-            rgb(225, 185, 105) 0%,
-            rgba(255, 255, 255, 0.6) 100%
-    );
-
-    clip-path: polygon(0 0, 91% 0, 98% 100%, 0% 100%);
-
-    z-index: -1;
-  }
 }
 </style>

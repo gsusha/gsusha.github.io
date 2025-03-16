@@ -13,7 +13,6 @@
 .ui-header {
   text-align: center;
   font-weight: 600;
-  font-family: var(--font-family--secondary), sans-serif;
 
   margin-bottom: 40px;
 

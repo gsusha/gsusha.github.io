@@ -24,7 +24,8 @@ withDefaults(defineProps<UiButtonProps>(), {
 <style lang="scss" scoped>
 .ui-button {
   display: block;
-  width: 200px;
+  width: fit-content;
+
   border-radius: 30px;
   border: 2px solid transparent;
 
@@ -32,6 +33,7 @@ withDefaults(defineProps<UiButtonProps>(), {
 
   text-align: center;
   font-weight: 600;
+  font-size: 16px;
 
   cursor: pointer;
 

@@ -32,9 +32,8 @@
     gap: 4px;
 
     &-title {
-      font-family: var(--font-family-secondary), sans-serif;
-      font-size: 24px;
-      font-weight: 700;
+      font-size: 20px;
+      font-weight: 600;
       color: var(--color-text-primary);
 
       line-height: 1.2;
