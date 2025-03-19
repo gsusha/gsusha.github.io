@@ -16,13 +16,33 @@
       </div>
     </div>
 
-    <UiButton>Захантить</UiButton>
+    <UiButton @click="gravityScroll">Захантить</UiButton>
   </UiCard>
 </template>
 
 <script lang="ts" setup>
 import UiCard from "@/components/ui/UiCard.vue";
 import UiButton from "@/components/ui/UiButton.vue";
+
+const gravityScroll = () => {
+  let start: number | null = null;
+  let velocity = 0;
+  const gravity = 2;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+  const animate = (timestamp: number) => {
+    if (start === null) start = timestamp;
+
+    velocity += gravity;
+    window.scrollBy(0, velocity);
+
+    if (window.scrollY < maxScroll) {
+      requestAnimationFrame(animate);
+    }
+  };
+
+  requestAnimationFrame(animate);
+};
 </script>
 
 <style lang="scss" scoped>
@@ -35,11 +55,9 @@ import UiButton from "@/components/ui/UiButton.vue";
 
   &__content {
     display: flex;
-    gap: 20px;
-    margin-bottom: 10px;
-  }
+    align-items: center;
 
-  &__description {
+    gap: 20px;
     margin-bottom: 20px;
   }
 }

@@ -1,9 +1,9 @@
 <template>
   <div class="section-hero">
     <div class="section-hero__content">
+      <FeatureAboutCard class="section-hero__card" />
       <FeatureSkills class="section-hero__skills" />
       <FeatureCharacter class="section-hero__model" />
-      <FeatureAboutCard class="section-hero__card" />
     </div>
     <div class="section-hero__overlap">
       <div class="section-hero__overlap-group">
@@ -24,6 +24,8 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
 </script>
 
 <style lang="scss">
+@use '@/assets/styles/media' as media;
+
 .section-hero {
   //background-size: cover;
   //background: radial-gradient(circle, #48d7ff 0%, #0099cc 50%, #006688 100%) no-repeat;
@@ -34,6 +36,41 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
     position: relative;
     z-index: 1;
     min-height: 100vh;
+
+    @include media.max('lg') {
+      min-height: unset;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__skills {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+
+    @include media.max('lg') {
+      position: relative;
+      top: unset;
+      left: unset;
+    }
+  }
+
+  &__card {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+
+    width: 520px;
+
+    transform: translate(0, -50%);
+
+    @include media.max('lg') {
+      position: relative;
+      top: unset;
+      right: unset;
+    }
   }
 
   &__overlap {
@@ -123,22 +160,6 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
       //  width: 1920px;
       //}
     }
-  }
-
-  &__skills {
-    position: absolute;
-    top: 200px;
-    left: 50px;
-  }
-
-  &__card {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-
-    width: 520px;
-
-    transform: translate(0, -50%);
   }
 }
 </style>
