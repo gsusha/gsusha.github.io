@@ -1,6 +1,6 @@
 <template>
   <Renderer ref="rendererRef" antialias resize alpha shadow>
-    <Camera :position="{ x: 0.3, y: 1.4, z: 1.3 }" />
+    <Camera :position="{ x: cameraXPosition, y: 1.4, z: 1.3 }" />
     <Scene>
       <HemisphereLight
           color="#ffffff"
@@ -48,13 +48,20 @@ import {
   Scene,
   GltfModel, PointLight
 } from "troisjs";
-import { ref } from "vue";
+import {computed, ref} from "vue";
 import { AnimationMixer, Clock, LoopOnce, LoopRepeat, sRGBEncoding } from "three";
+import {useWindowSize} from "@vueuse/core";
 
 const rendererRef = ref(null);
 const mixer = ref<AnimationMixer | null>(null);
 const clock = ref(new Clock());
 const actions = ref<{ [key: string]: any }>({});
+
+const { width } = useWindowSize();
+
+const cameraXPosition = computed(() => {
+  return width.value < 992 ? 0 : 0.3;
+})
 
 const onLoad = (gltf: any) => {
   const model = gltf.scene;
