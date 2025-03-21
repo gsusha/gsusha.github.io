@@ -49,6 +49,10 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
     transform: translate(0, -50%);
   }
 
+  &__model {
+    pointer-events: none;
+  }
+
   @include media.max('lg') {
     &__content {
       min-height: unset;
@@ -56,13 +60,16 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
       flex-direction: column;
       align-items: center;
 
-      padding-top: 120px;
+      padding-top: 160px;
     }
 
     &__skills {
-      position: relative;
-      top: 50px;
-      left: unset;
+      top: 150px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      order: 1;
     }
 
     &__card {
@@ -70,9 +77,23 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
       top: unset;
       right: unset;
       transform: unset;
-      margin-bottom: 140px;
+      margin-bottom: 60px;
 
       max-width: 80%;
+
+      order: 3;
+    }
+
+    &__model {
+      max-height: 800px;
+      order: 2;
+    }
+  }
+
+  @include media.max('sm') {
+    &__card {
+      max-width: calc(100% - 60px);
+      margin-bottom: 30px;
     }
   }
 

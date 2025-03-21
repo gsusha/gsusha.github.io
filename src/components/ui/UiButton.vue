@@ -14,6 +14,8 @@ defineProps<UiButtonProps>();
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .ui-button {
   display: block;
   width: fit-content;
@@ -31,5 +33,9 @@ defineProps<UiButtonProps>();
 
   color: var(--color-text-primary);
   background: #ffffff;
+
+  @include media.max('sm') {
+    font-size: 14px;
+  }
 }
 </style>

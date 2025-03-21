@@ -1,27 +1,20 @@
 <template>
-  <UiCard class="feature-about-card">
-    <template #title>
+  <div class="feature-about-card">
+    <div class="feature-about-card__title">
       Я Frontend-разработчик 🚀
-    </template>
+    </div>
 
-    <div class="feature-about-card__content">
-      <div class="feature-about-card__cv">
-        <img src="@/assets/images/me.svg" alt="Резюме"/>
-      </div>
-
-      <div class="feature-about-card__description">
-        Привет! 👋 У меня 3+ года опыта, люблю Vue 3, TypeScript, Nuxt 3 и всё, что делает веб лучше.
-        Работаю в команде, решаю задачи, пишу чистый код.
-        Давай создавать крутые проекты вместе!
-      </div>
+    <div class="feature-about-card__description">
+      Привет! 👋 У меня 3+ года опыта, люблю Vue 3, TypeScript, Nuxt 3 и всё, что делает веб лучше.
+      Работаю в команде, решаю задачи, пишу чистый код.
+      Давай создавать крутые проекты вместе!
     </div>
 
     <UiButton @click="gravityScroll">Захантить</UiButton>
-  </UiCard>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import UiCard from "@/components/ui/UiCard.vue";
 import UiButton from "@/components/ui/UiButton.vue";
 
 const gravityScroll = () => {
@@ -46,19 +39,38 @@ const gravityScroll = () => {
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .feature-about-card {
-  &__cv {
-    min-width: fit-content;
-    width: 130px;
-    height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+
+    line-height: 1.2;
+
+    text-align: center;
   }
 
-  &__content {
-    display: flex;
-    align-items: center;
+  &__description {
+    font-size: 16px;
+    line-height: 1.4;
+  }
 
-    gap: 20px;
-    margin-bottom: 20px;
+  @include media.max('sm') {
+    &__description {
+      font-size: 14px;
+      text-align: center;
+    }
   }
 }
 </style>
