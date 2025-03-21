@@ -10,7 +10,7 @@
 
       <DirectionalLight
           color="#ffffff"
-          :intensity="3"
+          :intensity="2"
           :position="{ x: -1, y: 3, z: -1 }"
           cast-shadow
           :shadow-camera-top="5"
