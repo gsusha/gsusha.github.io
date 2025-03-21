@@ -11,8 +11,6 @@
         <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-1" />
         <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-2" />
         <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-3" />
-        <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-4" />
-        <div class="section-hero__overlap-group-ellipse section-hero__overlap-group-ellipse-5" />
       </div>
     </div>
   </div>
@@ -27,34 +25,18 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
 @use '@/assets/styles/media' as media;
 
 .section-hero {
-  //background-size: cover;
-  //background: radial-gradient(circle, #48d7ff 0%, #0099cc 50%, #006688 100%) no-repeat;
-
   position: relative;
 
   &__content {
     position: relative;
     z-index: 1;
     min-height: 100vh;
-
-    @include media.max('lg') {
-      min-height: unset;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
   }
 
   &__skills {
     position: absolute;
     top: 200px;
     left: 50px;
-
-    @include media.max('lg') {
-      position: relative;
-      top: unset;
-      left: unset;
-    }
   }
 
   &__card {
@@ -65,14 +47,36 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
     width: 520px;
 
     transform: translate(0, -50%);
+  }
 
-    @include media.max('lg') {
+  @include media.max('lg') {
+    &__content {
+      min-height: unset;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding-top: 120px;
+    }
+
+    &__skills {
+      position: relative;
+      top: 50px;
+      left: unset;
+    }
+
+    &__card {
       position: relative;
       top: unset;
       right: unset;
+      transform: unset;
+      margin-bottom: 140px;
+
+      max-width: 80%;
     }
   }
 
+  // градиентный фон
   &__overlap {
     position: absolute;
     top: 0;
@@ -136,29 +140,6 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
 
         transform: translate(-50%, 300%);
       }
-
-      // подложка
-      //&-ellipse-4 {
-      //  background: radial-gradient(50% 50% at 50% 50%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-      //  border-radius: 602.73px/44.56px;
-      //  filter: blur(110px);
-      //  height: 89px;
-      //  left: 625px;
-      //  position: absolute;
-      //  top: 1127px;
-      //  width: 1205px;
-      //}
-
-      //&-ellipse-5 {
-      //  background: linear-gradient(180deg, rgb(56, 114, 187) 0%, rgb(143, 189, 207) 49.43%, rgb(61, 165, 128) 100%);
-      //  border-radius: 960px/90.88px;
-      //  filter: blur(130px);
-      //  height: 182px;
-      //  left: 267px;
-      //  position: absolute;
-      //  top: 812px;
-      //  width: 1920px;
-      //}
     }
   }
 }

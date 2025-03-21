@@ -83,6 +83,8 @@ import UiHeader from "@/components/ui/UiHeader.vue";
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .section-hunt {
   &__content {
     display: grid;
@@ -157,6 +159,18 @@ import UiHeader from "@/components/ui/UiHeader.vue";
       &:hover {
         border-color: #3F61D8;
       }
+    }
+  }
+
+  @include media.max('md') {
+    &__content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include media.max('sm') {
+    &__item {
+      font-size: 12px;
     }
   }
 }

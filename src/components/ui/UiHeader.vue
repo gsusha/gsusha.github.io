@@ -10,6 +10,8 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .ui-header {
   text-align: center;
   font-weight: 600;
@@ -25,6 +27,16 @@
     font-size: 16px;
     color: var(--color-text-secondary);
     margin-top: 10px;
+  }
+
+  @include media.max('md') {
+    &__title {
+      font-size: 20px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+    }
   }
 }
 </style>

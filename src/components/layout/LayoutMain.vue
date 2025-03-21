@@ -19,6 +19,8 @@ import SectionHunt from "@/components/sections/SectionHunt.vue";
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .layout-main {
   flex: 1 1 100%;
   overflow: hidden;
@@ -43,6 +45,10 @@ import SectionHunt from "@/components/sections/SectionHunt.vue";
     max-width: 1200px;
 
     padding: 40px;
+
+    @include media.max('md') {
+      padding: 20px;
+    }
   }
 }
 </style>
