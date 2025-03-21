@@ -5,7 +5,7 @@
       <HemisphereLight
           color="#ffffff"
           groundColor="#707070"
-          :intensity="2"
+          :intensity="1"
           :position="{ x: 0, y: 3, z: 0 }" />
 
       <DirectionalLight
@@ -26,8 +26,8 @@
       <!-- Добавляем заполняющий свет, чтобы убрать тёмные участки -->
       <PointLight
           color="#ffffff"
-          :intensity="1.5"
-          :position="{ x: 0.5, y: 1.5, z: 1 }" />
+          :intensity="1"
+          :position="{ x: 0.5, y: 1.7, z: 1 }" />
 
       <GltfModel
           src="/gsusha.glb"
@@ -49,7 +49,7 @@ import {
   GltfModel, PointLight
 } from "troisjs";
 import { ref } from "vue";
-import { AnimationMixer, Clock, LoopOnce, LoopRepeat } from "three";
+import { AnimationMixer, Clock, LoopOnce, LoopRepeat, sRGBEncoding } from "three";
 
 const rendererRef = ref(null);
 const mixer = ref<AnimationMixer | null>(null);
@@ -58,7 +58,6 @@ const actions = ref<{ [key: string]: any }>({});
 
 const onLoad = (gltf: any) => {
   const model = gltf.scene;
-  console.log("Animations:", gltf.animations);
 
   mixer.value = new AnimationMixer(model);
 
@@ -80,11 +79,12 @@ const onLoad = (gltf: any) => {
   
   actions.value.greeting.play();
   actions.value.greeting.getMixer().addEventListener("finished", () => {
-    console.log("Greeting закончилась, включаем idle");
     actions.value.idle.play();
   });
 
   if (rendererRef.value) {
+    const renderer = rendererRef.value.renderer;
+    renderer.outputEncoding = sRGBEncoding;
     rendererRef.value.onBeforeRender(updateMixer);
   }
 };
