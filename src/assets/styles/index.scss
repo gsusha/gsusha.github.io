@@ -115,4 +115,12 @@ img {
     top: 50%;
     transform: translateY(-50%);
   }
+
+  @include media.max('sm') {
+    max-width: 200px;
+
+    &__content {
+      font-size: 10px;
+    }
+  }
 }

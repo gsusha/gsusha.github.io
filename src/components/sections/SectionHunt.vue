@@ -169,8 +169,8 @@ import UiHeader from "@/components/ui/UiHeader.vue";
   }
 
   @include media.max('sm') {
-    &__item {
-      font-size: 12px;
+    &__content {
+      grid-template-columns: 1fr;
     }
   }
 }

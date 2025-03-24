@@ -77,6 +77,8 @@ const companies = [
 
   &__level {
     align-self: center;
+    height: 40px;
+    min-height: 40px;
     margin-bottom: 40px;
   }
 

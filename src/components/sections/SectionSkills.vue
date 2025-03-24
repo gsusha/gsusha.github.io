@@ -87,7 +87,7 @@ const skills: SkillType[] = [
   {
     imgSrc: LighthouseImage,
     name: 'Оптимизация производительности',
-    level: '8',
+    level: '7',
   },
   {
     imgSrc: TestImage,

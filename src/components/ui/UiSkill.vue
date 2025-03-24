@@ -1,7 +1,7 @@
 <template>
   <div class="ui-skill">
     <div class="ui-skill__icon">
-      <img :src="imgSrc" :alt="name" />
+      <img :src="imgSrc" alt="" />
     </div>
     <div class="ui-skill__body">
       <div class="ui-skill__name">{{ name }}</div>
@@ -33,17 +33,23 @@ defineProps<UiSkillProps>();
   align-items: center;
 
   width: 500px;
-  height: 40px;
+  min-height: 50px;
   border-radius: 5px;
 
   &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     background: #F5F5F5;
 
     flex: 0 0 50px;
-
-    padding: 6px;
     border-radius: 5px 0 0 5px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__body {
@@ -55,7 +61,7 @@ defineProps<UiSkillProps>();
     width: 100%;
     height: 100%;
     background: #ffffff;
-    padding: 0 10px;
+    padding: 10px;
 
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
@@ -64,6 +70,7 @@ defineProps<UiSkillProps>();
   &__name {
     color: var(--color-text-secondary);
     font-weight: 600;
+    word-break: break-word;
   }
 
   &__progress {
@@ -75,7 +82,7 @@ defineProps<UiSkillProps>();
     align-items: center;
     justify-content: center;
 
-    flex: 0 0 80px;
+    flex: 0 0 60px;
     height: 100%;
     background: #EBEEF5;
     color: var(--color-text-secondary);
@@ -93,12 +100,14 @@ defineProps<UiSkillProps>();
   }
 
   @include media.max('sm') {
+    min-height: 40px;
+
     &__progress {
       flex-basis: 50px;
     }
 
     &__level {
-      flex-basis: 60px;
+      flex-basis: 40px;
     }
   }
 }
