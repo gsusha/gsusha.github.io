@@ -26,6 +26,7 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
 
 .section-hero {
   position: relative;
+  height: 100vh;
 
   &__content {
     position: relative;
@@ -50,7 +51,9 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
   }
 
   &__model {
-    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
   }
 
   @include media.max('lg') {
@@ -85,7 +88,8 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
     }
 
     &__model {
-      max-height: 600px;
+      position: relative;
+      height: 90vh;
       order: 2;
     }
   }
