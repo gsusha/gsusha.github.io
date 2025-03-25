@@ -50,7 +50,7 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
   }
 
   &__model {
-    pointer-events: none;
+    height: 100vh;
   }
 
   @include media.max('lg') {
@@ -60,7 +60,7 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
       flex-direction: column;
       align-items: center;
 
-      padding-top: 160px;
+      padding-top: 210px;
     }
 
     &__skills {
@@ -85,7 +85,7 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
     }
 
     &__model {
-      max-height: 800px;
+      max-height: 600px;
       order: 2;
     }
   }
