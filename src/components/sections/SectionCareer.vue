@@ -71,6 +71,8 @@ const companies = [
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .section-career {
   display: flex;
   flex-direction: column;
@@ -85,6 +87,11 @@ const companies = [
   &__skills {
     display: flex;
     gap: 4px;
+
+    @include media.max('md') {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 
   &__company {

@@ -33,7 +33,7 @@
       </a>
       <a
           class="section-hunt__item section-hunt__item--phone"
-          href="tel:79604515666"
+          href="tel:89604515666"
       >
         <div class="section-hunt__item-img">
           <img src="@/assets/images/phone.png" alt="позвонить" />

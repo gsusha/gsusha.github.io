@@ -20,10 +20,9 @@
           :shadow-camera-near="0.1"
           :shadow-camera-far="15"
           :shadow-radius="4"
-          :shadow-mapSize="{ width: 2048, height: 2048 }"
+          :shadow-mapSize="{ width: 1024, height: 1024 }"
       />
 
-      <!-- Добавляем заполняющий свет, чтобы убрать тёмные участки -->
       <PointLight
           color="#ffffff"
           :intensity="1"
