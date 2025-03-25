@@ -36,7 +36,7 @@ import UiAchievement from "@/components/ui/UiAchievement.vue";
 import WheatImage from "@/assets/images/icons/wheat.svg";
 import TomatoImage from "@/assets/images/icons/tomato.svg";
 import AlienImage from "@/assets/images/icons/alien.svg";
-import ProgrammingImage from '@/assets/images/icons/programming.png';
+import ProgrammingImage from '@/assets/images/icons/pixel-programming.webp';
 import {generateRandomId, ITEM_NAME, ItemTypes} from "@/utils/common";
 
 const agrocomplexSkills: ItemTypes[] = [ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];

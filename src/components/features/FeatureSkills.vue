@@ -39,11 +39,11 @@
 
 <script setup lang="ts">
 import UiHexagon from "@/components/ui/UiHexagon.vue";
-import PixelVueImage from "@/assets/images/icons/pixel-vue.png";
-import PixelTsImage from "@/assets/images/icons/pixel-ts.png";
-import PixelNuxtImage from "@/assets/images/icons/pixel-nuxt.png";
-import PixelPiniaImage from "@/assets/images/icons/pixel-pinia.png";
-import PixelSassImage from "@/assets/images/icons/pixel-sass.png";
+import PixelVueImage from "@/assets/images/icons/pixel-vue.webp";
+import PixelTsImage from "@/assets/images/icons/pixel-ts.webp";
+import PixelNuxtImage from "@/assets/images/icons/pixel-nuxt.webp";
+import PixelPiniaImage from "@/assets/images/icons/pixel-pinia.webp";
+import PixelSassImage from "@/assets/images/icons/pixel-sass.webp";
 </script>
 
 <style lang="scss" scoped>

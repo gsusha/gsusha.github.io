@@ -15,7 +15,7 @@
          target="_blank"
       >
         <div class="section-hunt__item-img">
-          <img src="@/assets/images/telegram.png" alt="telegram" />
+          <img src="@/assets/images/icons/telegram.webp" alt="telegram" />
         </div>
         <div class="section-hunt__item-name">
           telegram
@@ -25,7 +25,7 @@
          href="https://wa.me/79604515666"
       >
         <div class="section-hunt__item-img">
-          <img src="@/assets/images/whatsapp.png" alt="whatsapp" />
+          <img src="@/assets/images/icons/whatsapp.webp" alt="whatsapp" />
         </div>
         <div class="section-hunt__item-name">
           whatsapp
@@ -36,7 +36,7 @@
           href="tel:89604515666"
       >
         <div class="section-hunt__item-img">
-          <img src="@/assets/images/phone.png" alt="позвонить" />
+          <img src="@/assets/images/icons/phone.webp" alt="позвонить" />
         </div>
         <div class="section-hunt__item-name">
           позвонить
@@ -47,7 +47,7 @@
          href="https://rostov.hh.ru/resume/c347e7beff0df704680039ed1f556e45614179"
          target="_blank">
         <div class="section-hunt__item-img">
-          <img src="@/assets/images/hh.png" alt="hh.ru" />
+          <img src="@/assets/images/icons/hh.webp" alt="hh.ru" />
         </div>
         <div class="section-hunt__item-name">
           hh.ru
@@ -58,7 +58,7 @@
          target="_blank"
       >
         <div class="section-hunt__item-img">
-          <img src="@/assets/images/habr.png" alt="хабр карьера" />
+          <img src="@/assets/images/icons/habr.webp" alt="хабр карьера" />
         </div>
         <div class="section-hunt__item-name">
           хабр карьера
@@ -69,7 +69,7 @@
           href="mailto:x.dyachenko@yandex.ru"
       >
         <div class="section-hunt__item-img">
-          <img src="@/assets/images/mail.png" alt="email" />
+          <img src="@/assets/images/icons/mail.webp" alt="email" />
         </div>
         <div class="section-hunt__item-name">
           email
