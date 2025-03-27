@@ -1,6 +1,7 @@
 <template>
-  <div v-if="modelSrc" class="feature-gltf-model-loader">
-    <Renderer antialias resize alpha shadow ref="rendererRef">
+  <div class="feature-gltf-model-loader">
+    <UiLoader v-if="isLoading" class="feature-gltf-model-loader__spinner" />
+    <Renderer v-else antialias resize alpha shadow ref="rendererRef">
       <Camera :position="{ x: cameraXPosition, y: 1.4, z: 1.3 }" />
       <Scene>
         <HemisphereLight
@@ -26,7 +27,6 @@
       </Scene>
     </Renderer>
   </div>
-  <div v-else>Загрузка модели...</div>
 </template>
 
 <script setup lang="ts">
@@ -34,12 +34,14 @@ import { ref, computed, onMounted } from "vue";
 import { Camera, DirectionalLight, HemisphereLight, PointLight, Renderer, Scene, GltfModel } from "troisjs";
 import { AnimationMixer, Clock, LoopOnce, LoopRepeat, sRGBEncoding } from "three";
 import { useWindowSize } from "@vueuse/core";
+import UiLoader from "@/components/ui/UiLoader.vue";
 
 const rendererRef = ref(null);
 const mixer = ref<AnimationMixer | null>(null);
 const clock = ref(new Clock());
 const actions = ref<{ [key: string]: any }>({});
 const modelSrc = ref<string | null>(null);
+const isLoading = ref<boolean>(true);
 
 const db = new PouchDB("3d-models");
 
@@ -63,6 +65,8 @@ const fetchModel = async () => {
 
     modelSrc.value = URL.createObjectURL(new Blob([arrayBuffer], { type: "model/gltf-binary" }));
     console.log("✅ Модель сохранена в IndexedDB");
+  } finally {
+    isLoading.value = false;
   }
 };
 
@@ -105,8 +109,18 @@ onMounted(fetchModel);
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/media' as media;
+
 .feature-gltf-model-loader {
   width: 100%;
   height: 100%;
+
+  &__spinner {
+    left: 30%;
+
+    @include media.max('lg') {
+      left: calc(50% - 47px);
+    }
+  }
 }
 </style>

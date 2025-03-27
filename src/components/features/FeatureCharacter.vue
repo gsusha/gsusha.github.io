@@ -5,7 +5,7 @@
         <GltfModelLazy />
       </template>
       <template #fallback>
-        <div class="loading">Загрузка модели...</div>
+        <UiLoader class="feature-character__spinner" />
       </template>
     </Suspense>
   </div>
@@ -13,25 +13,24 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent } from "vue";
+import UiLoader from "@/components/ui/UiLoader.vue";
 
 const GltfModelLazy = defineAsyncComponent(() => import("@/components/features/FeatureGltfModelLoader.vue"));
 </script>
 
 <style scoped>
+@use '@/assets/styles/media' as media;
+
 .feature-character {
   pointer-events: none;
   width: 100%;
-}
 
-.loading {
-  position: absolute;
-  top: 50%;
-  left: 36%;
-  transform: translate(-50%, -50%);
+  &__spinner {
+    left: 30%;
 
-  text-align: center;
-  font-size: 18px;
-  color: #fff;
-  padding: 20px;
+    @include media.max('lg') {
+      left: calc(50% - 47px);
+    }
+  }
 }
 </style>
