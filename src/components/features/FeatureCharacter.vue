@@ -18,7 +18,7 @@ import UiLoader from "@/components/ui/UiLoader.vue";
 const GltfModelLazy = defineAsyncComponent(() => import("@/components/features/FeatureGltfModelLoader.vue"));
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @use '@/assets/styles/media' as media;
 
 .feature-character {
