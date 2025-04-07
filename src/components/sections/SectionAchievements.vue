@@ -12,15 +12,33 @@
     <div class="section-achievements__content">
       <div class="section-achievements__item">
         <img src="@/assets/images/hackaton1.webp" alt="" />
-        <div class="section-achievements__item-title">Выиграла хакатон</div>
+        <div class="section-achievements__item-title">
+          <a href="https://taganrogprav.ru/zavershilsya-marafon-programmirovaniya-hakaton-rospatent-jufu/"
+             target="_blank"
+          >
+            Выиграла хакатон
+          </a>
+        </div>
       </div>
       <div class="section-achievements__item">
         <img src="@/assets/images/hackaton2.webp" alt="" />
-        <div class="section-achievements__item-title">Выиграла другой хакатон</div>
+        <div class="section-achievements__item-title">
+          <a href="https://sfedu.ru/press-center/news/70424"
+             target="_blank"
+          >
+            Выиграла другой хакатон
+          </a>
+        </div>
       </div>
       <div class="section-achievements__item">
         <img src="@/assets/images/diploma.webp" alt="" />
-        <div class="section-achievements__item-title">Бакалавр IT</div>
+        <div class="section-achievements__item-title">
+          <a href="https://sfedu.ru/"
+             target="_blank"
+          >
+            Бакалавр IT
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -48,11 +66,19 @@ import UiHeader from "@/components/ui/UiHeader.vue";
     padding: 10px;
 
     &-title {
+      display: block;
       text-align: center;
       padding: 20px 0;
 
-      color: var(--color-text-primary);
-      font-weight: 700;
+      a {
+        color: var(--color-text-primary);
+        font-weight: 700;
+        transition: 0.2s color ease;
+
+        &:hover {
+          color: var(--color-text-secondary);
+        }
+      }
     }
   }
 
