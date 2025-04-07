@@ -10,43 +10,54 @@
       </template>
     </UiHeader>
     <div class="section-achievements__content">
-      <div class="section-achievements__item">
-        <img src="@/assets/images/hackaton1.webp" alt="" />
+      <a
+          class="section-achievements__item"
+          v-for="item in items"
+          :key="item.id"
+          :href="item.url"
+          target="_blank"
+      >
+        <img :src="item.imageUrl" alt="" loading="lazy"/>
         <div class="section-achievements__item-title">
-          <a href="https://taganrogprav.ru/zavershilsya-marafon-programmirovaniya-hakaton-rospatent-jufu/"
-             target="_blank"
-          >
-            Выиграла хакатон
-          </a>
+          {{ item.name }}
         </div>
-      </div>
-      <div class="section-achievements__item">
-        <img src="@/assets/images/hackaton2.webp" alt="" />
-        <div class="section-achievements__item-title">
-          <a href="https://sfedu.ru/press-center/news/70424"
-             target="_blank"
-          >
-            Выиграла другой хакатон
-          </a>
-        </div>
-      </div>
-      <div class="section-achievements__item">
-        <img src="@/assets/images/diploma.webp" alt="" />
-        <div class="section-achievements__item-title">
-          <a href="https://sfedu.ru/"
-             target="_blank"
-          >
-            Бакалавр IT
-          </a>
-        </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import UiHeader from "@/components/ui/UiHeader.vue";
+import RospatentImage from '@/assets/images/hackaton1.webp';
+import CyberGardenImage from '@/assets/images/hackaton2.webp';
+import SfeduImage from '@/assets/images/diploma.webp';
 
-// TODO: ресайзнуть
+interface Achievement {
+  id: string;
+  name: string;
+  imageUrl: string;
+  url: string;
+}
+
+const items = [
+  {
+    id: 'rospatent',
+    name: 'Выиграла хакатон',
+    imageUrl: RospatentImage,
+    url: 'https://taganrogprav.ru/zavershilsya-marafon-programmirovaniya-hakaton-rospatent-jufu/',
+  },
+  {
+    id: 'cyber_garden',
+    name: 'Выиграла ещё хакатон',
+    imageUrl: CyberGardenImage,
+    url: 'https://sfedu.ru/press-center/news/70424',
+  },
+  {
+    id: 'sfedu',
+    name: 'Бакалавр IT',
+    imageUrl: SfeduImage,
+    url: 'https://sfedu.ru/',
+  }
+]
 </script>
 
 <style lang="scss" scoped>
@@ -61,23 +72,28 @@ import UiHeader from "@/components/ui/UiHeader.vue";
   }
 
   &__item {
+    display: block;
+
     flex: 1 1 33%;
     background: #f2f4f8;
     padding: 10px;
 
+    will-change: transform;
+    transition: transform 0.3s ease-in-out;
+
     &-title {
-      display: block;
       text-align: center;
       padding: 20px 0;
+      color: var(--color-text-primary);
+      font-weight: 700;
+      transition: color 0.2s ease-in-out;
+    }
 
-      a {
-        color: var(--color-text-primary);
-        font-weight: 700;
-        transition: 0.2s color ease;
+    &:hover {
+      transform: scale(1.1);
 
-        &:hover {
-          color: var(--color-text-secondary);
-        }
+      .section-achievements__item-title {
+        color: var(--color-text-secondary);
       }
     }
   }
