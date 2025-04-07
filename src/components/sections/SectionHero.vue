@@ -57,6 +57,8 @@ import FeatureAboutCard from "@/components/features/FeatureAboutCard.vue";
   }
 
   @include media.max('lg') {
+    height: fit-content;
+
     &__content {
       min-height: unset;
       display: flex;
