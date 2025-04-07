@@ -34,8 +34,14 @@ defineProps<UiButtonProps>();
   color: var(--color-text-primary);
   background: #ffffff;
 
+  transition: border-color 0.2s ease;
+
   @include media.max('sm') {
     font-size: 14px;
+  }
+
+  &:hover {
+    border-color: var(--color-text-secondary);
   }
 }
 </style>
