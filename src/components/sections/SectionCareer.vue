@@ -36,12 +36,14 @@ import UiAchievement from "@/components/ui/UiAchievement.vue";
 import WheatImage from "@/assets/images/icons/wheat.svg";
 import TomatoImage from "@/assets/images/icons/tomato.svg";
 import AlienImage from "@/assets/images/icons/alien.svg";
+import CatImage from '@/assets/images/icons/cat.svg';
 import ProgrammingImage from '@/assets/images/icons/pixel-programming.webp';
 import {generateRandomId, ITEM_NAME, ItemTypes} from "@/utils/common";
 
 const agrocomplexSkills: ItemTypes[] = [ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
 const smartomatoSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
 const miuraSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.react, ITEM_NAME.redux, ITEM_NAME.scss];
+const freelanceSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.react, ITEM_NAME.redux, ITEM_NAME.scss];
 
 const companies = [
   {
@@ -66,6 +68,13 @@ const companies = [
     period: 'Ноябрь 2021 — Май 2022 (7 месяцев)',
     description: 'Персонаж принял вызов по переносу проекта с нативного JS на React. Здесь ей удалось не только освоить новый фреймворк, но и внедрить Material UI с магической лёгкостью.',
     skills: miuraSkills,
+  },
+  {
+    image: CatImage,
+    name: 'Заказная разработка',
+    period: 'Январь 2021 — Январь 2023',
+    description: 'Персонаж взял на себя создание целой кучи заказных проектов: от сложных веб-приложений до сайтов и скриптов с чистым JS. Процесс пошёл: UI/UX улучшены, а производительность оптимизирована. Проблемы с адаптацией и анимациями решены как по волшебству!',
+    skills: freelanceSkills,
   },
 ]
 </script>
