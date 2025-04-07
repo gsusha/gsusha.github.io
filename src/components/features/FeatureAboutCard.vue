@@ -10,31 +10,22 @@
       Давай создавать крутые проекты вместе!
     </div>
 
-    <UiButton @click="gravityScroll">Захантить</UiButton>
+    <UiButton @click="handleClick">Захантить</UiButton>
   </div>
 </template>
 
 <script lang="ts" setup>
 import UiButton from "@/components/ui/UiButton.vue";
+import { useGravityScroll } from "@/composables/useGravityScroll";
+import { useConfetti } from "@/composables/useConfetti";
 
-const gravityScroll = () => {
-  let start: number | null = null;
-  let velocity = 0;
-  const gravity = 2;
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+const { scrollToBottom } = useGravityScroll();
 
-  const animate = (timestamp: number) => {
-    if (start === null) start = timestamp;
+const { triggerConfetti } = useConfetti();
 
-    velocity += gravity;
-    window.scrollBy(0, velocity);
-
-    if (window.scrollY < maxScroll) {
-      requestAnimationFrame(animate);
-    }
-  };
-
-  requestAnimationFrame(animate);
+const handleClick = () => {
+  scrollToBottom();
+  triggerConfetti();
 };
 </script>
 
