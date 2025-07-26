@@ -6,10 +6,11 @@
       </template>
 
       <template #subtitle>
-        Этот персонаж прошёл долгий путь и овладел искусством фронтенда, принимая сложные вызовы и создавая мощные проекты!
+        Этот персонаж прошёл долгий путь и овладел искусством фронтенда, принимая сложные вызовы и создавая мощные
+        проекты!
       </template>
     </UiHeader>
-    <UiSkill class="section-career__level" :img-src="ProgrammingImage" name="Frontend-разработка" level="8" />
+    <UiSkill class="section-career__level" :img-src="ProgrammingImage" name="Frontend-разработка" level="8"/>
     <div class="section-career__content">
       <UiAchievement
           class="section-career__company"
@@ -21,7 +22,7 @@
           :description="company.description"
       >
         <div class="section-career__skills">
-          <UiItem v-for="item in company.skills" :key="generateRandomId('company-skill')" :is="item" />
+          <UiItem v-for="item in company.skills" :key="generateRandomId('company-skill')" :is="item"/>
         </div>
       </UiAchievement>
     </div>
@@ -33,6 +34,7 @@ import UiItem from "@/components/ui/UiItem.vue";
 import UiHeader from "@/components/ui/UiHeader.vue";
 import UiSkill from "@/components/ui/UiSkill.vue";
 import UiAchievement from "@/components/ui/UiAchievement.vue";
+import QuestionImage from "@/assets/images/icons/question.svg";
 import WheatImage from "@/assets/images/icons/wheat.svg";
 import TomatoImage from "@/assets/images/icons/tomato.svg";
 import AlienImage from "@/assets/images/icons/alien.svg";
@@ -40,12 +42,20 @@ import CatImage from '@/assets/images/icons/cat.svg';
 import ProgrammingImage from '@/assets/images/icons/pixel-programming.webp';
 import {generateRandomId, ITEM_NAME, ItemTypes} from "@/utils/common";
 
+const ndaSkills: ItemTypes[] = [ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
 const agrocomplexSkills: ItemTypes[] = [ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
 const smartomatoSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.vue, ITEM_NAME.nuxt, ITEM_NAME.pinia, ITEM_NAME.scss];
 const miuraSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.react, ITEM_NAME.redux, ITEM_NAME.scss];
 const freelanceSkills: ItemTypes[] = [ITEM_NAME.js, ITEM_NAME.ts, ITEM_NAME.react, ITEM_NAME.redux, ITEM_NAME.scss];
 
 const companies = [
+  {
+    image: QuestionImage,
+    name: 'NDA',
+    period: 'Май 2025 — текущее время',
+    description: 'Новая глава. Персонаж погружается в эпопею с микрофронтендами и DDD, проектируя модули, строя CRUD-интерфейсы и приручая сложные сценарии. Подробности скоро!',
+    skills: ndaSkills,
+  },
   {
     image: WheatImage,
     name: 'Фирма \'Агрокомплекс\' им. Н.И. Ткачева',
